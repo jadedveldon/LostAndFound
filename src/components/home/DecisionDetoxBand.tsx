@@ -24,6 +24,8 @@ export function DecisionDetoxBand() {
             src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop"
             alt="Quiet beach moment"
             tilt={-3}
+            showTape={true}
+            tapeRotate="4deg"
             className="w-[280px] sm:w-[320px] shadow-elevated"
           />
         </div>

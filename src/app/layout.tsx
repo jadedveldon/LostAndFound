@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   description: "Personal travel curators. Designing slow trips for people in transition.",
 };
 
+import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { MotionProvider } from "@/components/layout/MotionProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +45,12 @@ export default function RootLayout({
       lang="en"
       className={`${dmSerifDisplay.variable} ${newsreader.variable} ${caveatBrush.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body className="min-h-screen flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <SmoothScroll />
+        <MotionProvider>
+          {children}
+        </MotionProvider>
+      </body>
     </html>
   );
 }

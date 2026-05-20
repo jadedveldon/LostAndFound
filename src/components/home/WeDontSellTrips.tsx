@@ -1,4 +1,5 @@
 import React from 'react';
+import { Polaroid } from '../ui/Polaroid';
 
 export function WeDontSellTrips() {
   return (
@@ -34,91 +35,62 @@ export function WeDontSellTrips() {
           </span>
         </div>
 
-        {/* Right Column — Editorial Image Collage */}
-        <div className="w-full lg:w-[55%] flex flex-col gap-6">
+        {/* Right Column — Editorial Polaroid Scatter */}
+        <div className="w-full lg:w-[55%] flex flex-col gap-10">
 
-          {/* Row 1 — Large image with overlay + small polaroid */}
-          <div className="flex gap-5 items-start">
-
-            {/* Large image with caption overlay */}
-            <div className="relative w-[58%] rotate-[-1deg] overflow-hidden shadow-[var(--shadow-card)]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+          {/* Row 1 — Two side-by-side Polaroids */}
+          <div className="flex gap-6 items-start justify-center sm:justify-start">
+            
+            {/* Polaroid A */}
+            <div className="w-[52%]">
+              <Polaroid
                 src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=700&auto=format&fit=crop"
                 alt="Quiet beach, wet hair"
-                className="w-full h-[220px] sm:h-[260px] object-cover"
-                style={{ filter: 'saturate(0.88) contrast(1.03) sepia(0.06)' }}
+                caption="The afternoon nobody checked their phone"
+                tilt="-2deg"
+                showTape={true}
+                tapeRotate="-4deg"
+                className="w-full shadow-elevated"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink)]/60 via-transparent to-transparent" />
-              <div className="absolute bottom-3 left-3 right-3">
-                <span
-                  className="text-[var(--paper)] text-base sm:text-lg leading-tight block"
-                  style={{ fontFamily: 'var(--font-script)' }}
-                >
-                  The afternoon nobody checked their phone
-                </span>
-              </div>
             </div>
 
-            {/* Small polaroid-style — wine glasses */}
-            <div className="w-[38%] mt-8 rotate-[3deg]">
-              <div className="bg-[var(--paper-warm)] p-2.5 pb-8 shadow-[var(--shadow-polaroid)]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=400&auto=format&fit=crop"
-                  alt="Half-finished wine glasses"
-                  className="w-full h-[120px] sm:h-[140px] object-cover"
-                  style={{ filter: 'saturate(0.9) sepia(0.08)' }}
-                />
-              </div>
-              <p
-                className="text-[var(--clay)] text-sm sm:text-base mt-2 text-center leading-tight rotate-[-1deg]"
-                style={{ fontFamily: 'var(--font-script)' }}
-              >
-                Dinner that turned into a four-hour conversation
-              </p>
+            {/* Polaroid B */}
+            <div className="w-[44%] mt-8">
+              <Polaroid
+                src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=400&auto=format&fit=crop"
+                alt="Half-finished wine glasses"
+                caption="Dinner that turned into a four-hour conversation"
+                tilt="4deg"
+                className="w-full shadow-elevated"
+              />
             </div>
           </div>
 
-          {/* Row 2 — Train window + sleeping in car */}
-          <div className="flex gap-5 items-end ml-4 sm:ml-8">
+          {/* Row 2 — Two side-by-side Polaroids */}
+          <div className="flex gap-6 items-start justify-center sm:justify-start ml-4 sm:ml-12">
 
-            {/* Train window — text-over-image */}
-            <div className="w-[45%] relative overflow-hidden rotate-[1deg] shadow-[var(--shadow-card)]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            {/* Polaroid C */}
+            <div className="w-[45%]">
+              <Polaroid
                 src="https://images.unsplash.com/photo-1474690870753-1b92efa1f2d8?q=80&w=500&auto=format&fit=crop"
                 alt="Train window blur"
-                className="w-full h-[160px] sm:h-[200px] object-cover"
-                style={{ filter: 'saturate(0.75) contrast(1.05) sepia(0.1) brightness(0.9)' }}
+                caption="The first moment your brain finally went quiet"
+                tilt="1deg"
+                showTape={true}
+                tapeRotate="5deg"
+                className="w-full shadow-elevated"
               />
-              <div className="absolute inset-0 bg-[var(--ink)]/35 flex items-center justify-center p-3">
-                <span
-                  className="text-[var(--paper)] text-sm sm:text-base leading-snug text-center"
-                  style={{ fontFamily: 'var(--font-script)' }}
-                >
-                  The first moment your brain finally went quiet
-                </span>
-              </div>
             </div>
 
-            {/* Sleeping in a car */}
-            <div className="w-[50%]">
-              <div className="relative overflow-hidden rotate-[-2deg] shadow-[var(--shadow-polaroid)] bg-[var(--paper-warm)] p-2 pb-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=500&auto=format&fit=crop"
-                  alt="Someone asleep in a car ride"
-                  className="w-full h-[140px] sm:h-[170px] object-cover"
-                  style={{ filter: 'saturate(0.85) sepia(0.07)' }}
-                />
-              </div>
-              <p
-                className="text-sm sm:text-base mt-2 ml-1 leading-tight text-[var(--clay)]"
-                style={{ fontFamily: 'var(--font-script)' }}
-              >
-                &ldquo;The nap nobody apologised for&rdquo;
-              </p>
+            {/* Polaroid D */}
+            <div className="w-[47%] mt-4">
+              <Polaroid
+                src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=500&auto=format&fit=crop"
+                alt="Someone asleep in a car ride"
+                caption="The nap nobody apologised for"
+                tilt="-3deg"
+                className="w-full shadow-elevated"
+              />
             </div>
           </div>
         </div>

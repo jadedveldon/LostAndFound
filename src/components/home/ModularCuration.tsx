@@ -41,23 +41,28 @@ export function ModularCuration() {
 
           {/* Right — Services Grid */}
           <div className="w-full lg:w-[64%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-[1px] bg-[var(--ink)]/8">
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-[var(--paper-deep)] hover:bg-[var(--paper)] transition-colors duration-medium group flex items-start gap-4 p-6 sm:p-7 cursor-default"
-                >
-                  <span className="t-mono text-[10px] text-[var(--clay)] uppercase tracking-widest shrink-0 mt-0.5">
-                    {service.id}
-                  </span>
-                  <span
-                    className="text-[var(--ink)] text-base sm:text-lg leading-snug group-hover:text-[var(--clay)] transition-colors duration-fast"
-                    style={{ fontFamily: 'var(--font-body)' }}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {services.map((service, index) => {
+                const tilts = ['-1deg', '0.6deg', '-0.8deg', '1.2deg', '-0.5deg', '0.8deg', '-1.1deg', '0.4deg'];
+                const tilt = tilts[index % tilts.length];
+                return (
+                  <div
+                    key={service.id}
+                    style={{ transform: `rotate(${tilt})` }}
+                    className="bg-[var(--paper-deep)] hover:bg-[var(--paper)] transition-all duration-medium group flex items-start gap-4 p-6 sm:p-7 shadow-[0_4px_12px_rgba(31,29,26,0.02)] hover:shadow-[0_12px_24px_rgba(31,29,26,0.06)] hover:rotate-0 hover:-translate-y-1 cursor-default border border-[var(--ink)]/4"
                   >
-                    {service.name}
-                  </span>
-                </div>
-              ))}
+                    <span className="t-mono text-[10px] text-[var(--clay)] uppercase tracking-widest shrink-0 mt-0.5">
+                      {service.id}
+                    </span>
+                    <span
+                      className="text-[var(--ink)] text-base sm:text-lg leading-snug group-hover:text-[var(--clay)] transition-colors duration-fast"
+                      style={{ fontFamily: 'var(--font-body)' }}
+                    >
+                      {service.name}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

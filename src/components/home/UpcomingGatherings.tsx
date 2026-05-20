@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { TreatedImage } from '../ui/TreatedImage';
 
 export function UpcomingGatherings() {
   return (
@@ -19,13 +20,11 @@ export function UpcomingGatherings() {
         <div className="flex flex-col lg:flex-row">
 
           {/* Left — Image */}
-          <div className="w-full lg:w-1/2 flex-shrink-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <div className="w-full lg:w-1/2 flex-shrink-0 min-h-[300px] sm:min-h-[380px] lg:min-h-[480px] overflow-hidden">
+            <TreatedImage
               src="https://images.unsplash.com/photo-1582972236019-ea4af5ffe587?q=80&w=1200&auto=format&fit=crop"
               alt="Ahangama, Sri Lanka coastline"
-              className="w-full h-[300px] sm:h-[380px] lg:h-full object-cover block"
-              style={{ filter: 'saturate(0.9) contrast(1.03) sepia(0.05)' }}
+              className="w-full h-full block"
             />
           </div>
 

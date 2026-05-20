@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '../ui/Button';
 import { Polaroid } from '../ui/Polaroid';
+import { HandArrow, HandUnderline } from '../illustrations/hand';
+import { MagneticButton } from '../ui/MagneticButton';
 
 export function Hero() {
   return (
@@ -18,11 +20,11 @@ export function Hero() {
             >
               Travel that feels like
             </span>
-            <span
-              className="text-[clamp(64px,9vw,120px)] leading-[0.88] text-[var(--clay)] ml-0 lg:ml-8 rotate-[-2deg] block mt-1"
-              style={{ fontFamily: 'var(--font-script)' }}
-            >
-              a long exhale.
+            <span className="relative ml-0 lg:ml-8 mt-2 block w-fit">
+              <span className="hero-script text-[clamp(64px,9vw,120px)] leading-[0.88] block">
+                a long exhale.
+              </span>
+              <HandUnderline className="absolute left-0 -bottom-3 w-[260px] sm:w-[320px] lg:w-[380px] text-[var(--clay)]" />
             </span>
           </h1>
 
@@ -30,63 +32,51 @@ export function Hero() {
             Curated slow travel experiences, intimate gatherings, and restorative journeys for people who need a softer way to experience life.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button variant="primary">Explore Gatherings</Button>
-            <Button variant="secondary">Plan a personal journey</Button>
+          <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto mt-4">
+            <MagneticButton>Explore Gatherings</MagneticButton>
+            <a href="/experience" className="btn-ghost-hand">
+              Plan a personal journey
+              <HandUnderline className="btn-underline" />
+            </a>
           </div>
         </div>
 
-        {/* Right — Mixed Image Collage */}
-        <div className="w-full lg:w-[45%] relative h-[350px] sm:h-[400px] lg:h-[480px] mt-4 lg:mt-0">
-
-          {/* Large polaroid — Sri Lanka */}
-          <div className="absolute right-[8%] top-[5%] z-20">
+        {/* Right — Scrapbook Cluster Column */}
+        <div className="w-full lg:w-[45%] mt-4 lg:mt-0">
+          <div className="hero-cluster">
+            {/* Polaroid A — large, rotated, with tape */}
             <Polaroid
               src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=600&auto=format&fit=crop"
               alt="Ahangama coast"
               caption="Ahangama, last spring"
-              tilt={-3}
-              className="w-[170px] sm:w-[200px] lg:w-[220px]"
+              tilt="2deg"
+              showTape={true}
+              tapeRotate="-4deg"
+              className="polaroid--lg"
+              style={{ zIndex: 3 }}
             />
-          </div>
 
-          {/* Small raw image — slow morning */}
-          <div className="absolute left-[2%] top-[18%] z-10 w-[120px] sm:w-[140px] lg:w-[150px] photo-treatment shadow-[var(--shadow-card)] rotate-[2deg]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=400&auto=format&fit=crop"
-              alt="Quiet morning meditation"
-              className="w-full h-auto"
+            {/* Polaroid B — smaller, overlapping lower-left, behind A, with tape */}
+            <Polaroid
+              src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=400&auto=format&fit=crop"
+              alt="Kerala backwaters"
+              caption="Kerala, monsoon"
+              tilt="-5deg"
+              showTape={true}
+              tapeRotate="6deg"
+              className="polaroid--sm"
+              style={{ zIndex: 2 }}
             />
-          </div>
 
-          {/* Text-over-image — Kerala */}
-          <div className="absolute right-[4%] bottom-[12%] z-30 w-[140px] sm:w-[160px] lg:w-[170px] rotate-[1deg] overflow-hidden shadow-[var(--shadow-polaroid)]">
-            <div className="relative">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=400&auto=format&fit=crop"
-                alt="Kerala backwaters"
-                className="w-full h-[100px] sm:h-[110px] object-cover"
-                style={{ filter: 'saturate(0.85) contrast(1.05) sepia(0.08)' }}
-              />
-              <div className="absolute inset-0 bg-[var(--ink)]/40 flex items-end p-2">
-                <span className="text-[var(--paper)] text-sm leading-tight" style={{ fontFamily: 'var(--font-script)' }}>
-                  Kerala, monsoon
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Handwritten label */}
-          <div className="absolute left-[18%] bottom-[6%] z-30 rotate-[-4deg]">
-            <span className="text-[var(--clay)] text-lg lg:text-xl" style={{ fontFamily: 'var(--font-script)' }}>
+            {/* Handwritten label */}
+            <p className="hero-note">
               different places,
-            </span>
-            <br />
-            <span className="text-[var(--clay)] text-lg lg:text-xl" style={{ fontFamily: 'var(--font-script)' }}>
+              <br />
               one feeling.
-            </span>
+            </p>
+
+            {/* Curved arrow pointing from label to Polaroid B */}
+            <HandArrow className="hero-arrow" />
           </div>
         </div>
       </div>
