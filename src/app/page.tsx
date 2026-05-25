@@ -4,7 +4,7 @@ import { Hero } from "@/components/home/Hero";
 import { WeDontSellTrips } from "@/components/home/WeDontSellTrips";
 import { WhoWeVibeWith } from "@/components/home/WhoWeVibeWith";
 import { UpcomingGatherings } from "@/components/home/UpcomingGatherings";
-import { ModularCuration } from "@/components/home/ModularCuration";
+import { ExperienceSection } from "@/components/home/ExperienceSection";
 import { ReviewsCarousel } from "@/components/home/ReviewsCarousel";
 import { JournalPreview } from "@/components/home/JournalPreview";
 import { HandSquiggle } from "@/components/illustrations/hand";
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         <UpcomingGatherings />
-        <ModularCuration />
+        <ExperienceSection />
         <ReviewsCarousel />
 
         {/* Squiggle divider — paper bg matches ReviewsCarousel */}

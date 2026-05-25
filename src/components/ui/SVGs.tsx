@@ -36,7 +36,7 @@ export function HandCircle({ className = '' }: { className?: string }) {
 export function Tape({ className = '' }: { className?: string }) {
   return (
     <div 
-      className={`absolute top-[-10px] left-1/2 -translate-x-1/2 w-20 h-6 bg-[#E5DBC4] opacity-70 rotate-[-2deg] shadow-sm z-10 ${className}`} 
+      className={`absolute top-[-10px] left-1/2 -translate-x-1/2 w-20 h-6 bg-[var(--paper-deep)] opacity-70 rotate-[-2deg] shadow-sm z-10 ${className}`} 
     />
   );
 }

@@ -4,42 +4,234 @@
    LOST & FOUND — DESIGN TOKENS
    ===================================================================== */
 
+/* ── TT Norms ─────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-Thin.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-ThinItalic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-ExtraLight.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-ExtraLightItalic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-ExtraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-Light.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-LightItalic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-Regular.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-Italic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-Medium.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-MediumItalic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-Bold.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-BoldItalic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-ExtraBold.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-ExtraBoldItalic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-ExtraBoldItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-Heavy.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/tt-norms/TTNorms-HeavyItalic.woff2') format('woff2'),
+       url('/fonts/tt-norms/TTNorms-HeavyItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ── ITC American Typewriter Std ──────────────────────────────────────── */
+@font-face {
+  font-family: 'ITC American Typewriter Std';
+  src: url('/fonts/itc-american-typewriter/AmericanTypewriterStd-Light.woff2') format('woff2'),
+       url('/fonts/itc-american-typewriter/AmericanTypewriterStd-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC American Typewriter Std';
+  src: url('/fonts/itc-american-typewriter/AmericanTypewriterStd-Med.woff2') format('woff2'),
+       url('/fonts/itc-american-typewriter/AmericanTypewriterStd-Med.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC American Typewriter Std';
+  src: url('/fonts/itc-american-typewriter/AmericanTypewriterStd-Bold.woff2') format('woff2'),
+       url('/fonts/itc-american-typewriter/AmericanTypewriterStd-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Truetypewriter PolyglOTT ─────────────────────────────────────────── */
+@font-face {
+  font-family: 'Truetypewriter PolyglOTT';
+  src: url('/fonts/Truetypewriter PolyglOTT.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Thicker Destroy ──────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Thicker Destroy';
+  src: url('/fonts/Thicker Destroy.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Amsterdam 3 ──────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Amsterdam 3';
+  src: url('/fonts/Amsterdam_3_Font_Fontzaa.com_/Amsterdam.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* ==========================================================
      COLOR TOKENS
      ========================================================== */
 
   /* Primary surfaces */
-  --paper:        #F2EBDD;
-  --paper-deep:   #E5DBC4;
-  --paper-warm:   #FAF5EA;
+  --paper:        #f7f7f3;
+  --paper-deep:   #f7f7f3;
+  --paper-warm:   #f7f7f3;
 
   /* Text */
-  --ink:          #1F1D1A;
-  --ink-soft:     #4A463F;
-  --ink-mute:     #807A6E;
+  --ink:          #000000;
+  --ink-soft:     #3d3d3d;
+  --ink-mute:     #97896e;
 
   /* Brand accents */
-  --moss:         #5C6F5A;
-  --moss-deep:    #3F4F3E;
-  --clay:         #C45A3F;
-  --clay-deep:    #A04528;
-  --denim:        #6B7F95;
-  --denim-deep:   #4F6178;
-  --wheat:        #C9A876;
+  --moss:         #66725f;
+  --moss-deep:    #4d5548;
+  --clay:         #ce4737;
+  --clay-deep:    #a53028;
+  --denim:        #38678a;
+  --denim-deep:   #2a5070;
+  --wheat:        #97896e;
 
   /* Functional */
-  --focus-ring:   #C45A3F;
-  --error:        #A04528;
+  --focus-ring:   #ce4737;
+  --error:        #a53028;
 
   /* ==========================================================
      TYPOGRAPHY TOKENS
      ========================================================== */
 
-  --font-display:    'DM Serif Display', Georgia, serif;
-  --font-body:       'Newsreader', Georgia, serif;
-  --font-script:     'Caveat Brush', 'Brush Script MT', cursive;
-  --font-mono:       'JetBrains Mono', 'Courier New', monospace;
+  /* Primary roles */
+  --font-display:    'Hammersmith One', sans-serif;
+  --font-body:       'Oranienbaum', Georgia, serif;
+  --font-script:     'Amsterdam 3', cursive;
+  --font-brush:      'Caveat Brush', cursive;
+
+  /* Heading font */
+  --font-heading:    'TT Norms', system-ui, sans-serif;
+
+  /* Additional brand fonts */
+  --font-serif:      'Playfair Display', Georgia, serif;
+  --font-mono:       'ITC American Typewriter Std', 'Truetypewriter PolyglOTT', 'Courier New', monospace;
+  --font-destroy:    'Thicker Destroy', sans-serif;
 
   /* Type scale (desktop) */
   --type-display-script: clamp(96px, 12vw, 180px);
@@ -145,45 +337,12 @@
   }
 
   body {
-    background-color: var(--paper);
+    background-color: #f7f7f3;
     color: var(--ink);
     font-family: var(--font-body);
     font-size: var(--type-body);
     line-height: var(--lh-relaxed);
     font-weight: 400;
-  }
-
-  /* Paper grain — fixed overlay, sits above background, below content */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    mix-blend-mode: multiply;
-    opacity: 0.55; /* the SVG is already low-alpha; this lands at ~6% effective */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.12 0 0 0 0 0.11 0 0 0 0 0.10 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size: 240px 240px;
-  }
-
-  /* Warm light bloom — gives the cream depth instead of dead flatness */
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background: radial-gradient(
-      ellipse 80% 60% at 28% 18%,
-      rgba(255, 250, 240, 0.55) 0%,
-      transparent 55%
-    );
-  }
-
-  /* Ensure all real content sits above the texture layers */
-  body > * {
-    position: relative;
-    z-index: 2;
   }
 }
 
@@ -271,7 +430,7 @@
   }
 
   .t-eyebrow {
-    font-family: var(--font-mono);
+    font-family: var(--font-heading);
     font-size: var(--type-mono-sm);
     font-weight: 500;
     text-transform: uppercase;
@@ -287,6 +446,12 @@
   }
 
   .t-mono {
+    font-family: var(--font-heading);
+    font-size: var(--type-mono-sm);
+    letter-spacing: var(--ls-button);
+  }
+
+  .t-typewriter {
     font-family: var(--font-mono);
     font-size: var(--type-mono-sm);
     letter-spacing: var(--ls-button);
@@ -304,7 +469,7 @@
     justify-content: center;
     gap: var(--space-2);
     padding: 14px 24px;
-    font-family: var(--font-mono);
+    font-family: var(--font-heading);
     font-size: var(--type-body-sm);
     font-weight: 500;
     text-transform: uppercase;
@@ -676,7 +841,7 @@
   .btn-ghost-hand {
     position: relative;
     color: var(--ink);
-    font-family: var(--font-mono);
+    font-family: var(--font-heading);
     font-size: var(--type-body-sm);
     font-weight: 500;
     text-transform: uppercase;
@@ -703,14 +868,11 @@
     opacity: 1;
   }
 
-  /* Handwriting text weight and drawing reveal */
   .hero-script {
     font-family: var(--font-script);
     color: var(--clay);
-    -webkit-text-stroke: 1.4px var(--clay);   /* fattens the strokes */
-    paint-order: stroke fill;
     letter-spacing: 0.005em;
-    transform: rotate(-1.5deg);                /* hand-set, not laser-straight */
+    transform: rotate(-1.5deg);
     display: inline-block;
     animation: handwrite 1100ms cubic-bezier(0.22, 1, 0.36, 1) 350ms both;
   }

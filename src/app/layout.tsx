@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Newsreader, Caveat_Brush, JetBrains_Mono } from "next/font/google";
+import { Hammersmith_One, Oranienbaum, Playfair_Display, Caveat_Brush } from "next/font/google";
 import "./globals.css";
 
-const dmSerifDisplay = DM_Serif_Display({
+const hammersmithOne = Hammersmith_One({
   weight: ["400"],
   subsets: ["latin"],
   variable: "--font-display",
 });
 
-const newsreader = Newsreader({
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
+const oranienbaum = Oranienbaum({
+  weight: ["400"],
   subsets: ["latin"],
   variable: "--font-body",
 });
@@ -18,13 +17,14 @@ const newsreader = Newsreader({
 const caveatBrush = Caveat_Brush({
   weight: ["400"],
   subsets: ["latin"],
-  variable: "--font-script",
+  variable: "--font-brush",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  weight: ["400", "500"],
+const playfairDisplay = Playfair_Display({
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -43,8 +43,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSerifDisplay.variable} ${newsreader.variable} ${caveatBrush.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${hammersmithOne.variable} ${oranienbaum.variable} ${caveatBrush.variable} ${playfairDisplay.variable} antialiased`}
     >
+      <head>
+        {/* Oranienbaum italic — next/font/google doesn't carry this variant */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Oranienbaum:ital@1&display=swap"
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
         <SmoothScroll />
         <MotionProvider>

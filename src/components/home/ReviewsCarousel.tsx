@@ -30,9 +30,9 @@ const reviews = [
 
 export function ReviewsCarousel() {
   return (
-    <section className="bg-[var(--paper)] py-20 lg:py-28 overflow-hidden">
+    <section className="py-20 lg:py-28 overflow-hidden" style={{ backgroundColor: '#eae9e3' }}>
       <div className="container mb-10 lg:mb-14">
-        <span className="t-eyebrow block mb-3">EXPERIENCES</span>
+        <span className="t-eyebrow block mb-3">TESTIMONIALS</span>
         <h2
           className="text-[clamp(30px,3.5vw,48px)] font-normal text-[var(--ink)] leading-tight max-w-sm"
           style={{ fontFamily: 'var(--font-display)' }}
@@ -42,26 +42,58 @@ export function ReviewsCarousel() {
       </div>
 
       <div className="container">
-        <div className="flex flex-col">
+        {/* Responsive card grid: 1 col → 2 col (md) → 3 col (lg).
+            flex-wrap with a fixed item width gives us "justify-center" so
+            any orphan cards on the last row are automatically centered. */}
+        <div className="flex flex-wrap justify-center gap-6">
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="py-8 lg:py-10 border-b border-[var(--paper-deep)] last:border-b-0 flex flex-col md:flex-row gap-4 md:gap-12 md:items-baseline"
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] p-8 flex flex-col border"
+              style={{
+                backgroundColor: 'var(--paper-deep)',
+                borderColor: 'rgba(0,0,0,0.08)',
+              }}
             >
-              {/* Quote */}
-              <div className="flex-1">
-                <p
-                  className="text-[clamp(18px,1.8vw,26px)] text-[var(--ink)] leading-[1.4] italic"
-                  style={{ fontFamily: 'var(--font-body)' }}
-                >
-                  &ldquo;{rev.quote}&rdquo;
-                </p>
+              {/* Decorative opening quote mark */}
+              <div
+                className="mb-4 leading-none select-none"
+                style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: '48px',
+                  color: 'var(--clay)',
+                  lineHeight: 1,
+                }}
+                aria-hidden="true"
+              >
+                &#10077;
               </div>
 
-              {/* Attribution */}
-              <div className="md:w-[200px] shrink-0 flex flex-col gap-0.5 md:pt-1">
-                <span className="t-body font-medium text-[var(--ink)]">{rev.name}</span>
-                <span className="t-mono text-[10px] text-[var(--ink-mute)] uppercase tracking-widest">{rev.context}</span>
+              {/* Quote body — grows to fill available space */}
+              <p
+                className="flex-1 italic text-[var(--ink)] leading-[1.6] mb-6"
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 'clamp(16px, 1.15vw, 18px)',
+                }}
+              >
+                {rev.quote}
+              </p>
+
+              {/* Attribution — pinned to bottom, separated by a thin rule */}
+              <div
+                className="pt-5 flex flex-col gap-1"
+                style={{ borderTop: '1px solid rgba(0,0,0,0.10)' }}
+              >
+                <span
+                  className="font-semibold text-[var(--ink)]"
+                  style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(14px,1vw,15px)' }}
+                >
+                  {rev.name}
+                </span>
+                <span className="t-mono text-[var(--ink-mute)] uppercase">
+                  {rev.context}
+                </span>
               </div>
             </div>
           ))}

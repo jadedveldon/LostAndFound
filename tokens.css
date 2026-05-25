@@ -3,10 +3,7 @@
    Drop this into /styles/tokens.css and import in /app/globals.css
    ===================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+/* Fonts loaded via next/font/google in layout.tsx — no @import needed here */
 
 :root {
   /* ==========================================================
@@ -14,36 +11,40 @@
      ========================================================== */
 
   /* Primary surfaces */
-  --paper:        #F2EBDD;
-  --paper-deep:   #E5DBC4;
-  --paper-warm:   #FAF5EA;
+  --paper:        #f7f7f3;
+  --paper-deep:   #f7f7f3;
+  --paper-warm:   #f7f7f3;
 
   /* Text */
-  --ink:          #1F1D1A;
-  --ink-soft:     #4A463F;
-  --ink-mute:     #807A6E;
+  --ink:          #000000;
+  --ink-soft:     #3d3d3d;
+  --ink-mute:     #97896e;
 
   /* Brand accents */
-  --moss:         #5C6F5A;
-  --moss-deep:    #3F4F3E;
-  --clay:         #C45A3F;
-  --clay-deep:    #A04528;
-  --denim:        #6B7F95;
-  --denim-deep:   #4F6178;
-  --wheat:        #C9A876;
+  --moss:         #66725f;
+  --moss-deep:    #4d5548;
+  --clay:         #ce4737;
+  --clay-deep:    #a53028;
+  --denim:        #38678a;
+  --denim-deep:   #2a5070;
+  --wheat:        #97896e;
 
   /* Functional */
-  --focus-ring:   #C45A3F;
-  --error:        #A04528;
+  --focus-ring:   #ce4737;
+  --error:        #a53028;
 
   /* ==========================================================
      TYPOGRAPHY TOKENS
      ========================================================== */
 
-  --font-display:    'DM Serif Display', Georgia, serif;
-  --font-body:       'Newsreader', Georgia, serif;
-  --font-script:     'Caveat Brush', 'Brush Script MT', cursive;
-  --font-mono:       'JetBrains Mono', 'Courier New', monospace;
+  --font-display:    'Hammersmith One', sans-serif;
+  --font-body:       'Oranienbaum', Georgia, serif;
+  --font-script:     'Amsterdam 3', cursive;
+  --font-brush:      'Caveat Brush', cursive;
+  --font-heading:    'TT Norms', system-ui, sans-serif;
+  --font-serif:      'Playfair Display', Georgia, serif;
+  --font-mono:       'ITC American Typewriter Std', 'Truetypewriter PolyglOTT', 'Courier New', monospace;
+  --font-destroy:    'Thicker Destroy', sans-serif;
 
   /* Type scale (desktop) */
   --type-display-script: clamp(96px, 12vw, 180px);

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button } from '../ui/Button';
-import { Polaroid } from '../ui/Polaroid';
-import { HandArrow, HandUnderline } from '../illustrations/hand';
+import Image from 'next/image';
+import { HandUnderline } from '../illustrations/hand';
 import { MagneticButton } from '../ui/MagneticButton';
 
 export function Hero() {
@@ -15,16 +14,24 @@ export function Hero() {
 
           <h1 className="flex flex-col mb-8">
             <span
-              className="text-[clamp(36px,5vw,64px)] leading-[1.08] font-normal text-[var(--ink)]"
-              style={{ fontFamily: 'var(--font-display)' }}
+              className="text-[clamp(70px,3.2vw,80px)] leading-[1.05] text-[var(--ink)]"
+              style={{ fontFamily: 'var(--font-serif)' }}
             >
-              Travel that feels like
+              Travel that
             </span>
-            <span className="relative ml-0 lg:ml-8 mt-2 block w-fit">
-              <span className="hero-script text-[clamp(64px,9vw,120px)] leading-[0.88] block">
-                a long exhale.
+            <span
+              className="text-[clamp(70px,3.2vw,80px)] leading-[1.05] text-[var(--ink)]"
+              style={{ fontFamily: 'var(--font-serif)' }}
+            >
+              feels like
+            </span>
+            <span className="block w-fit">
+              <span
+                className="hero-script leading-[0.88] block"
+                style={{ fontSize: 'clamp(72px, 11.5vw, 165px)', paddingLeft: '0.88em', margin: '-0.31em' }}
+              >
+                a long exhale
               </span>
-              <HandUnderline className="absolute left-0 -bottom-3 w-[260px] sm:w-[320px] lg:w-[380px] text-[var(--clay)]" />
             </span>
           </h1>
 
@@ -41,43 +48,16 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right — Scrapbook Cluster Column */}
-        <div className="w-full lg:w-[45%] mt-4 lg:mt-0">
-          <div className="hero-cluster">
-            {/* Polaroid A — large, rotated, with tape */}
-            <Polaroid
-              src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=600&auto=format&fit=crop"
-              alt="Ahangama coast"
-              caption="Ahangama, last spring"
-              tilt="2deg"
-              showTape={true}
-              tapeRotate="-4deg"
-              className="polaroid--lg"
-              style={{ zIndex: 3 }}
-            />
-
-            {/* Polaroid B — smaller, overlapping lower-left, behind A, with tape */}
-            <Polaroid
-              src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=400&auto=format&fit=crop"
-              alt="Kerala backwaters"
-              caption="Kerala, monsoon"
-              tilt="-5deg"
-              showTape={true}
-              tapeRotate="6deg"
-              className="polaroid--sm"
-              style={{ zIndex: 2 }}
-            />
-
-            {/* Handwritten label */}
-            <p className="hero-note">
-              different places,
-              <br />
-              one feeling.
-            </p>
-
-            {/* Curved arrow pointing from label to Polaroid B */}
-            <HandArrow className="hero-arrow" />
-          </div>
+        {/* Right — Hero Image */}
+        <div className="w-full lg:w-[45%] mt-4 lg:mt-0 flex justify-center lg:justify-end">
+          <Image
+            src="/images/hero.png"
+            alt="Lost & Found travel"
+            width={600}
+            height={615}
+            className="w-full max-w-[600px] h-auto"
+            priority
+          />
         </div>
       </div>
 

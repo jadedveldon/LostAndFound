@@ -4,13 +4,13 @@ import { HandCircle } from '../illustrations/hand';
 import { Polaroid } from '../ui/Polaroid';
 
 const archetypes = [
-  'emotionally exhausted',
-  'people in transition',
-  'over-thinkers',
-  'recovering high achievers',
-  'creatives',
-  'quiet romantics',
-  'burnt-out CEOs & executives',
+  'Emotionally exhausted',
+  'People in transition',
+  'Over-thinkers',
+  'Recovering high achievers',
+  'Creatives',
+  'Quiet romantics',
+  'Burnt-out CEOs & executives',
 ];
 
 export function WhoWeVibeWith() {
@@ -24,7 +24,7 @@ export function WhoWeVibeWith() {
         {/* Large script heading */}
         <h2
           className="text-[clamp(64px,12vw,140px)] text-[var(--clay)] text-center leading-[0.85] mb-10 relative z-20 rotate-[-1.5deg] select-none"
-          style={{ fontFamily: 'var(--font-script)' }}
+          style={{ fontFamily: 'var(--font-brush)' }}
         >
           who we
           <br />
@@ -35,7 +35,7 @@ export function WhoWeVibeWith() {
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-4 mb-12 relative z-20 group text-center max-w-2xl px-4">
           {archetypes.map((item, idx) => (
             <React.Fragment key={idx}>
-              {item === 'over-thinkers' ? (
+              {item === 'Over-thinkers' ? (
                 <span className="relative inline-flex items-center justify-center px-4 py-1">
                   <Link
                     href={`/who-we-vibe-with#${item.replace(/[\s&]+/g, '-')}`}

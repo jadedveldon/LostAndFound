@@ -1,5 +1,5 @@
 import React from 'react';
-import { Polaroid } from '../ui/Polaroid';
+import Image from 'next/image';
 
 export function WeDontSellTrips() {
   return (
@@ -35,64 +35,15 @@ export function WeDontSellTrips() {
           </span>
         </div>
 
-        {/* Right Column — Editorial Polaroid Scatter */}
-        <div className="w-full lg:w-[55%] flex flex-col gap-10">
-
-          {/* Row 1 — Two side-by-side Polaroids */}
-          <div className="flex gap-6 items-start justify-center sm:justify-start">
-            
-            {/* Polaroid A */}
-            <div className="w-[52%]">
-              <Polaroid
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=700&auto=format&fit=crop"
-                alt="Quiet beach, wet hair"
-                caption="The afternoon nobody checked their phone"
-                tilt="-2deg"
-                showTape={true}
-                tapeRotate="-4deg"
-                className="w-full shadow-elevated"
-              />
-            </div>
-
-            {/* Polaroid B */}
-            <div className="w-[44%] mt-8">
-              <Polaroid
-                src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=400&auto=format&fit=crop"
-                alt="Half-finished wine glasses"
-                caption="Dinner that turned into a four-hour conversation"
-                tilt="4deg"
-                className="w-full shadow-elevated"
-              />
-            </div>
-          </div>
-
-          {/* Row 2 — Two side-by-side Polaroids */}
-          <div className="flex gap-6 items-start justify-center sm:justify-start ml-4 sm:ml-12">
-
-            {/* Polaroid C */}
-            <div className="w-[45%]">
-              <Polaroid
-                src="https://images.unsplash.com/photo-1474690870753-1b92efa1f2d8?q=80&w=500&auto=format&fit=crop"
-                alt="Train window blur"
-                caption="The first moment your brain finally went quiet"
-                tilt="1deg"
-                showTape={true}
-                tapeRotate="5deg"
-                className="w-full shadow-elevated"
-              />
-            </div>
-
-            {/* Polaroid D */}
-            <div className="w-[47%] mt-4">
-              <Polaroid
-                src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=500&auto=format&fit=crop"
-                alt="Someone asleep in a car ride"
-                caption="The nap nobody apologised for"
-                tilt="-3deg"
-                className="w-full shadow-elevated"
-              />
-            </div>
-          </div>
+        {/* Right Column — Philosophy Image */}
+        <div className="w-full lg:w-[55%] flex justify-center lg:justify-end">
+          <Image
+            src="/images/philosophy.png"
+            alt="Lost & Found philosophy"
+            width={730}
+            height={580}
+            className="w-full max-w-[730px] h-auto"
+          />
         </div>
       </div>
     </section>
