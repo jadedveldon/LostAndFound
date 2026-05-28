@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Polaroid } from "@/components/ui/Polaroid";
 import Link from 'next/link';
 
-export default function ExperiencePage() {
+export default function PlanWithUsPage() {
   const steps = [
     { title: "we have a chat", num: "01", img: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=400&auto=format&fit=crop" },
     { title: "we sketch it", num: "02", img: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=400&auto=format&fit=crop" },
@@ -12,18 +12,11 @@ export default function ExperiencePage() {
     { title: "you arrive", num: "04", img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop" }
   ];
 
-  const modules = [
-    { name: 'Itinerary Design', price: 'from INR 15,000' },
-    { name: 'Stays & Homes', price: 'from INR 5,000' },
-    { name: 'Local Experiences', price: 'from INR 8,000' },
-    { name: 'Restaurant Bookings', price: 'from INR 5,000' },
-  ];
-
   return (
     <>
       <Header />
       <main className="flex-1 flex flex-col w-full overflow-hidden">
-        
+
         {/* Section 1 - Hero */}
         <section className="pt-32 pb-24 section bg-[var(--paper)] paper-texture overflow-hidden">
           <div className="container flex flex-col lg:flex-row gap-16 items-center">
@@ -48,19 +41,19 @@ export default function ExperiencePage() {
             </div>
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative h-[400px]">
               <div className="absolute right-[20%] top-[10%] z-10">
-                <Polaroid 
+                <Polaroid
                   src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=400&auto=format&fit=crop"
                   alt="Trip 1" tilt={-5} className="w-48 md:w-56 shadow-lg"
                 />
               </div>
               <div className="absolute right-[5%] top-[20%] z-20">
-                <Polaroid 
+                <Polaroid
                   src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=400&auto=format&fit=crop"
                   alt="Trip 2" tilt={8} className="w-48 md:w-56 shadow-lg"
                 />
               </div>
               <div className="absolute right-[15%] top-[40%] z-30">
-                <Polaroid 
+                <Polaroid
                   src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=400&auto=format&fit=crop"
                   alt="Trip 3" tilt={-2} className="w-48 md:w-56 shadow-xl"
                 />
@@ -79,8 +72,8 @@ export default function ExperiencePage() {
               {steps.map((step, idx) => (
                 <div key={idx} className="flex flex-col items-center w-[240px]">
                   <span className="t-mono text-[var(--ink-mute)] text-xl mb-4">{step.num}</span>
-                  <Polaroid 
-                    src={step.img} 
+                  <Polaroid
+                    src={step.img}
                     alt={step.title}
                     tilt={idx % 2 === 0 ? 3 : -3}
                     className="w-full mb-6"
@@ -99,7 +92,7 @@ export default function ExperiencePage() {
           <div className="container max-w-4xl text-center">
             <h2 className="t-display-2 text-[var(--ink)] mb-8" style={{ fontFamily: 'var(--font-body)', fontStyle: 'italic' }}>*how we charge*</h2>
             <p className="t-body-lg text-[var(--ink-soft)] mb-6 mx-auto">
-              *we charge a curation fee, then book everything for you at cost — no markups* 
+              *we charge a curation fee, then book everything for you at cost — no markups*
             </p>
             <p className="t-body-lg text-[var(--ink-soft)] mx-auto mb-12">
               OR *we offer all-in package pricing if you prefer*

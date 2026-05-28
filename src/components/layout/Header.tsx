@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const navLinks = [
   { label: 'Gatherings', href: '/gatherings' },
-  { label: 'Experiences', href: '/experience' },
+  { label: 'Experiences', href: '/experiences' },
   { label: 'Our Journal', href: '/journal' },
   { label: 'Why We\'re Here', href: '/our-story' },
 ];
@@ -42,7 +42,7 @@ export function Header() {
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-4">
           <Link
-            href="/experience"
+            href="/plan-with-us"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--clay)] text-[var(--paper)] t-mono text-xs uppercase tracking-widest hover:bg-[var(--clay-deep)] transition-colors duration-fast"
           >
             Plan With Us
@@ -76,7 +76,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/experience"
+            href="/plan-with-us"
             onClick={() => setMenuOpen(false)}
             className="inline-flex items-center justify-center px-5 py-3 bg-[var(--clay)] text-[var(--paper)] t-mono text-xs uppercase tracking-widest mt-2"
           >

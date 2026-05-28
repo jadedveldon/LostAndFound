@@ -54,7 +54,7 @@ export function ExperienceSection() {
 
         {/* Bottom link */}
         <Link
-          href="/experience"
+          href="/plan-with-us"
           className="t-h3-italic text-[var(--denim)] text-[clamp(16px,2vw,24px)] hover:text-[var(--denim-deep)] transition-colors relative z-20"
         >
           Learn how it works ↗

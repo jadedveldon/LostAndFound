@@ -24,7 +24,7 @@ export function Footer() {
             <h4 className="t-eyebrow mb-4 text-[var(--ink-mute)]">Trips</h4>
             <ul className="flex flex-col gap-3">
               <li><Link href="/gatherings" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Gatherings</Link></li>
-              <li><Link href="/experience" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">The Experience</Link></li>
+              <li><Link href="/plan-with-us" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Plan With Us</Link></li>
               <li><Link href="/decision-detox" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Decision Detox</Link></li>
               <li><Link href="/a-la-carte" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">A La Carte</Link></li>
             </ul>

@@ -11,9 +11,9 @@
      ========================================================== */
 
   /* Primary surfaces */
-  --paper:        #f7f7f3;
-  --paper-deep:   #f7f7f3;
-  --paper-warm:   #f7f7f3;
+  --paper:        #f6efe6;
+  --paper-deep:   #ece0d0;
+  --paper-warm:   #fdf8f1;
 
   /* Text */
   --ink:          #000000;

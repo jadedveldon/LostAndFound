@@ -193,9 +193,9 @@
      ========================================================== */
 
   /* Primary surfaces */
-  --paper:        #f7f7f3;
-  --paper-deep:   #f7f7f3;
-  --paper-warm:   #f7f7f3;
+  --paper:        #f6efe6;
+  --paper-deep:   #ece0d0;
+  --paper-warm:   #fdf8f1;
 
   /* Text */
   --ink:          #000000;
@@ -337,7 +337,7 @@
   }
 
   body {
-    background-color: #f7f7f3;
+    background-color: #f6efe6;
     color: var(--ink);
     font-family: var(--font-body);
     font-size: var(--type-body);

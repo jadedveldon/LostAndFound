@@ -40,8 +40,8 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto mt-4">
-            <MagneticButton>Explore Gatherings</MagneticButton>
-            <a href="/experience" className="btn-ghost-hand">
+            <a href="/experiences"><MagneticButton>Explore Gatherings</MagneticButton></a>
+            <a href="/plan-with-us" className="btn-ghost-hand">
               Plan a personal journey
               <HandUnderline className="btn-underline" />
             </a>
