@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { HandSquiggle } from "@/components/illustrations/hand";
 
 const leaveLines = [
   "stories,",
@@ -16,39 +15,50 @@ export function YouLeaveWith() {
 
   return (
     <section className="band-moss w-full py-[var(--space-24)]">
-      <div className="container max-w-[720px] mx-auto px-6 lg:px-16">
+      <div className="container">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
 
-        <span className="t-eyebrow text-[var(--paper)] block mb-6" style={{ opacity: 0.6 }}>
-          WHAT YOU TAKE HOME
-        </span>
-
-        <h2 className="t-display-2 text-[var(--paper)] mb-10">
-          You leave with more than photos.
-        </h2>
-
-        <p className="t-h3-italic text-[var(--paper)] mb-4">
-          <em>You leave with:</em>
-        </p>
-
-        <div className="flex flex-col gap-2">
-          {leaveLines.map((line, idx) => (
-            <motion.p
-              key={idx}
-              className="t-h3-italic text-[var(--paper)]"
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-8%" }}
-              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: idx * 0.12 }}
+          {/* Left column (~45%) — Headline anchor */}
+          <div className="w-full lg:w-[45%]">
+            <span
+              className="t-eyebrow text-[var(--paper)] block mb-6"
+              style={{ opacity: 0.6 }}
             >
-              <em>{line}</em>
-            </motion.p>
-          ))}
-        </div>
+              WHAT YOU TAKE HOME
+            </span>
+            <h2 className="t-display-2 text-[var(--paper)] mb-3">
+              You leave with more than photos.
+            </h2>
+            <p className="t-body-italic text-[var(--paper)]/70">
+              something no itinerary can plan.
+            </p>
+          </div>
 
-        <div className="flex justify-center mt-16 opacity-40">
-          <HandSquiggle className="text-[var(--wheat)] w-24 h-5" />
-        </div>
+          {/* Right column (~55%) — Leave-with list */}
+          <div className="w-full lg:w-[55%] lg:pt-2">
+            <p
+              className="t-mono text-[var(--paper)] mb-4"
+              style={{ opacity: 0.6 }}
+            >
+              You leave with:
+            </p>
+            <div className="flex flex-col gap-2">
+              {leaveLines.map((line, idx) => (
+                <motion.p
+                  key={idx}
+                  className="t-h3-italic text-[var(--paper)]"
+                  initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-8%" }}
+                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: idx * 0.12 }}
+                >
+                  <em>{line}</em>
+                </motion.p>
+              ))}
+            </div>
+          </div>
 
+        </div>
       </div>
     </section>
   );

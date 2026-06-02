@@ -3,7 +3,8 @@ import React from "react";
 const logisticsCols = [
   { label: "DATES", value: "Aug 20–26, 2026" },
   { label: "WHERE", value: "Ahangama, Sri Lanka" },
-  { label: "COHORT", value: "14 travellers · hosted" },
+  { label: "COHORT", value: "12 travellers · hosted" },
+  { label: "PRICE", value: "From $1,200 USD" },
 ];
 
 export function LogisticsStrip() {
@@ -12,7 +13,7 @@ export function LogisticsStrip() {
       <div className="container">
 
         {/* Three-column quick reference */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {logisticsCols.map((col) => (
             <div key={col.label} className="border-l border-[var(--ink)]/15 pl-6">
               <span className="t-eyebrow text-[var(--ink-mute)] block mb-2">{col.label}</span>
@@ -26,9 +27,9 @@ export function LogisticsStrip() {
           STAY INCLUDED · MOST MEALS INCLUDED · LOCAL EXPERIENCES INCLUDED · AIRPORT PICKUPS INCLUDED · FLIGHTS NOT INCLUDED
         </p>
 
-        {/* Pricing gate line */}
-        <p className="t-body-italic text-[var(--ink-mute)] text-center" style={{ fontFamily: "var(--font-body)", fontStyle: "italic" }}>
-          <em>For pricing and full inclusions, request your invite below.</em>
+        {/* Deposit note */}
+        <p className="t-mono text-[var(--ink-mute)] text-center tracking-widest text-xs mt-6">
+          30% DEPOSIT · $360 USD · TO SECURE YOUR SPOT
         </p>
 
       </div>

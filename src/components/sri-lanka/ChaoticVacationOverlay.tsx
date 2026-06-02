@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react"; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { motion, useReducedMotion } from "framer-motion";
 import { TreatedImage } from "@/components/ui/TreatedImage";
 import { HandCheck } from "@/components/illustrations/hand";
+import { Placeholder } from "@/components/ui/Placeholder";
 
 const needItems = [
   "Space to breathe",
@@ -53,36 +53,48 @@ export function ChaoticVacationOverlay() {
 
       {/* Below-image copy */}
       <section className="bg-[var(--paper)] w-full py-[var(--space-24)]">
-        <div className="container max-w-[720px] mx-auto px-6 lg:px-16">
-          <p className="t-body-lg text-[var(--ink)] mb-6">We need:</p>
+        <div className="container max-w-[1200px] mx-auto px-6 lg:px-16">
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
 
-          <ul className="flex flex-col gap-4 mb-10">
-            {needItems.map((item, idx) => (
-              <motion.li
-                key={idx}
-                className="flex items-start gap-4"
-                initial={shouldReduceMotion ? false : { opacity: 0, x: -8 }}
-                whileInView={{ opacity: 1, x: 0 }}
+            {/* Left column — copy */}
+            <div className="w-full md:w-[55%]">
+              <p className="t-body-lg text-[var(--ink)] mb-6">We need:</p>
+
+              <ul className="flex flex-col gap-4 mb-10">
+                {needItems.map((item, idx) => (
+                  <motion.li
+                    key={idx}
+                    className="flex items-start gap-4"
+                    initial={shouldReduceMotion ? false : { opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-8%" }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: idx * 0.1 }}
+                  >
+                    <span className="shrink-0 mt-1 w-6 h-6 text-[var(--moss)] block">
+                      <HandCheck className="w-full h-full" />
+                    </span>
+                    <span className="t-body-lg text-[var(--ink)] leading-[1.6]">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+
+              <motion.p
+                className="t-h3-italic text-[var(--denim)]"
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-8%" }}
-                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: idx * 0.1 }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="shrink-0 mt-1 w-6 h-6 text-[var(--moss)] block">
-                  <HandCheck className="w-full h-full" />
-                </span>
-                <span className="t-body-lg text-[var(--ink)] leading-[1.6]">{item}</span>
-              </motion.li>
-            ))}
-          </ul>
+                <em>This gathering was created for exactly that.</em>
+              </motion.p>
+            </div>
 
-          <motion.p
-            className="t-h3-italic text-[var(--denim)] text-center"
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-8%" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <em>This gathering was created for exactly that.</em>
-          </motion.p>
+            {/* Right column — image placeholder */}
+            <div className="w-full md:w-[45%]">
+              <Placeholder className="w-full" style={{ minHeight: 420 }} />
+            </div>
+
+          </div>
         </div>
       </section>
     </>
