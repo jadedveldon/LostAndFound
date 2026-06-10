@@ -3,7 +3,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { TreatedImage } from "@/components/ui/TreatedImage";
 import { HandCheck } from "@/components/illustrations/hand";
-import { Placeholder } from "@/components/ui/Placeholder";
 
 const needItems = [
   "Space to breathe",
@@ -22,8 +21,7 @@ export function ChaoticVacationOverlay() {
       <section className="relative w-full overflow-hidden" style={{ height: "70vh", minHeight: 360 }}>
         <div className="absolute inset-0">
           <TreatedImage
-            // TODO[ASSET]: replace with /images/sri-lanka/chaotic-vacation.jpg
-            src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=1600&auto=format&fit=crop"
+            src="/images/chaotic-vacation.png"
             alt="Aerial of palm-fringed beach with rock formations, Ahangama Sri Lanka"
             className="w-full h-full"
             style={{ objectFit: "cover", height: "100%" }}
@@ -35,11 +33,11 @@ export function ChaoticVacationOverlay() {
             position: "absolute",
             top: "12%",
             left: "6%",
-            maxWidth: 620,
+            maxWidth: 860,
             fontFamily: "var(--font-display)",
             color: "var(--paper)",
-            fontSize: "var(--type-display-2)",
-            lineHeight: 1.05,
+            fontSize: "clamp(32px, 3.5vw, 52px)",
+            lineHeight: 1.15,
             textShadow: "0 2px 18px rgba(31,29,26,0.42)",
           }}
           initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
@@ -47,7 +45,7 @@ export function ChaoticVacationOverlay() {
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          Most of us don&apos;t need another chaotic vacation.
+          Most of us don&apos;t need<br />another chaotic vacation.
         </motion.div>
       </section>
 
@@ -58,7 +56,7 @@ export function ChaoticVacationOverlay() {
 
             {/* Left column — copy */}
             <div className="w-full md:w-[55%]">
-              <p className="t-body-lg text-[var(--ink)] mb-6">We need:</p>
+              <p className="t-display-2 text-[var(--ink)] mb-6">We need:</p>
 
               <ul className="flex flex-col gap-4 mb-10">
                 {needItems.map((item, idx) => (
@@ -89,14 +87,19 @@ export function ChaoticVacationOverlay() {
               </motion.p>
               <div className="mt-8">
                 <a href="#request-invite" className="btn btn-primary">
-                  Apply Now →
+                  Request Your Invite
                 </a>
               </div>
             </div>
 
-            {/* Right column — image placeholder */}
+            {/* Right column — landing page image */}
             <div className="w-full md:w-[45%]">
-              <Placeholder className="w-full" style={{ minHeight: 420 }} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/l&f Website - sri lanka -landing page.png"
+                alt="Sri Lanka gathering experience"
+                className="w-full h-auto"
+              />
             </div>
 
           </div>

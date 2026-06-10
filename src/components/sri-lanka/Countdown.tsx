@@ -57,7 +57,7 @@ export function Countdown() {
 
         {/* Eyebrow */}
         <p className="t-eyebrow text-[var(--paper)] opacity-70 mb-4 text-center">
-          APPLICATIONS CLOSE
+          Early bird applications close
         </p>
 
         {/* Date heading */}
@@ -138,7 +138,7 @@ export function Countdown() {
               });
             }}
           >
-            APPLY NOW →
+            REQUEST YOUR INVITE
           </button>
         </div>
 

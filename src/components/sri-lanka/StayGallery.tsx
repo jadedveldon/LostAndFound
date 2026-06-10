@@ -4,54 +4,14 @@ import React, { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 const galleryItems = [
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-1.jpg
-    src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800",
-    alt: "Tropical villa exterior with lush greenery",
-    label: "Villa · Sri Lanka",
-  },
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-2.jpg
-    src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800",
-    alt: "Bright hotel room with ocean views",
-    label: "Suite · Sri Lanka",
-  },
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-3.jpg
-    src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=800",
-    alt: "Serene resort pool surrounded by palms",
-    label: "Pool · Sri Lanka",
-  },
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-4.jpg
-    src: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=800",
-    alt: "Open-air lounge with rattan furniture",
-    label: "Lounge · Sri Lanka",
-  },
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-5.jpg
-    src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800",
-    alt: "Rooftop terrace overlooking the coastline",
-    label: "Terrace · Sri Lanka",
-  },
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-6.jpg
-    src: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=800",
-    alt: "Hammock strung between palms at dusk",
-    label: "Garden · Sri Lanka",
-  },
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-7.jpg
-    src: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800",
-    alt: "Minimal bedroom with white linen and warm light",
-    label: "Room · Sri Lanka",
-  },
-  {
-    // TODO[ASSET]: replace with /images/sri-lanka/stay-8.jpg
-    src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=800",
-    alt: "Infinity pool merging with the horizon",
-    label: "Infinity Pool · Sri Lanka",
-  },
+  { src: "/images/stayImages/1.jpg", alt: "Stay — image 1", label: "Villa · Sri Lanka" },
+  { src: "/images/stayImages/2.jpg", alt: "Stay — image 2", label: "Suite · Sri Lanka" },
+  { src: "/images/stayImages/3.jpg", alt: "Stay — image 3", label: "Pool · Sri Lanka" },
+  { src: "/images/stayImages/4.jpg", alt: "Stay — image 4", label: "Lounge · Sri Lanka" },
+  { src: "/images/stayImages/8.jpg", alt: "Stay — image 5", label: "Terrace · Sri Lanka" },
+  { src: "/images/stayImages/11.jpg", alt: "Stay — image 6", label: "Garden · Sri Lanka" },
+  { src: "/images/stayImages/15.jpg", alt: "Stay — image 7", label: "Room · Sri Lanka" },
+  { src: "/images/stayImages/18.jpg", alt: "Stay — image 8", label: "Infinity Pool · Sri Lanka" },
 ];
 
 export function StayGallery() {
@@ -59,7 +19,7 @@ export function StayGallery() {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-[var(--paper)] py-[var(--space-24)]">
+    <section id="where-you-will-stay" className="w-full bg-[var(--paper)] py-[var(--space-24)]">
       <div className="container">
         {/* Section heading */}
         <motion.div
@@ -73,7 +33,7 @@ export function StayGallery() {
             WHERE YOU&apos;LL STAY
           </span>
           <h2 className="t-display-2 text-[var(--ink)]">
-            Where you&apos;ll Stay
+            A Private Villa in Ahangama
           </h2>
         </motion.div>
       </div>

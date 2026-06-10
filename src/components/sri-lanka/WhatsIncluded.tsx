@@ -9,7 +9,6 @@ const includedItems = [
   "Local Transport For Planned Activities",
   "Community Events",
   "Airport Guidance & Coordination",
-  "Welcome Gifting",
   "Curated Host Support Throughout",
   "Fun Locally Crafted Goodie Bags",
 ];
@@ -32,21 +31,18 @@ export function WhatsIncluded() {
 
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="t-eyebrow text-[var(--ink-mute)] mb-4">
-            WHAT&rsquo;S INCLUDED
+          <p className="t-display-2 text-[var(--ink)] mb-4">
+            The Package
           </p>
-          <h2 className="t-h1 text-[var(--ink)] whitespace-nowrap">
-            Everything taken care of.
-          </h2>
         </div>
 
         {/* Two-column layout with vertical separator */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-0">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 
           {/* Left — Included */}
-          <div className="w-full lg:w-1/2 lg:pr-16 lg:border-r lg:border-[var(--ink)]/10">
+          <div className="w-full lg:w-1/2">
             <h3 className="t-h3-italic text-[var(--moss)] mb-8">
-              <em>included</em>
+              <em>Included</em>
             </h3>
             <div className="flex flex-col" style={{ gap: "10px" }}>
               {includedItems.map((item) => (
@@ -68,9 +64,9 @@ export function WhatsIncluded() {
           </div>
 
           {/* Right — Not Included */}
-          <div className="w-full lg:w-1/2 lg:pl-16">
+          <div className="w-full lg:w-1/2">
             <h3 className="t-h3-italic text-[var(--clay)] mb-8">
-              <em>not included</em>
+              <em>Not Included</em>
             </h3>
             <div className="flex flex-col" style={{ gap: "10px" }}>
               {notIncludedItems.map((item) => (
@@ -96,7 +92,7 @@ export function WhatsIncluded() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <a href="#request-invite" className="btn btn-primary px-10 py-4 tracking-widest text-sm">
-            Apply Now →
+            Request Your Invite
           </a>
         </div>
 

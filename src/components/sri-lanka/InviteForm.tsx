@@ -82,7 +82,7 @@ export function InviteForm() {
         {/* Above-form header */}
         <div className="text-center mb-10">
           <span className="t-eyebrow text-[var(--ink-mute)] block mb-4">REQUEST YOUR INVITE</span>
-          <h2 className="t-display-2 text-[var(--ink)] mb-4">Tell us a little about you.</h2>
+          <h2 className="t-display-2 text-[var(--ink)] mb-4">Tell us a little about yourself.</h2>
         </div>
 
         {submitState === "success" ? (

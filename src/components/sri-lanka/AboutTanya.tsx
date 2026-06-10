@@ -82,18 +82,8 @@ export function AboutTanya() {
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
             >
               A marketer, community-builder, slow traveler, and someone deeply
-              obsessed with creating meaningful experiences.
-            </motion.p>
-
-            <motion.p
-              className="t-body-lg text-[var(--ink-soft)] leading-[1.7] mb-5"
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-8%" }}
-              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
-            >
-              Some of the most life-changing moments I&rsquo;ve had while
-              travelling came from:
+              obsessed with creating meaningful experiences. Some of the most
+              life-changing moments I&rsquo;ve had while travelling came from:
             </motion.p>
 
             {/* Staggered italic list */}

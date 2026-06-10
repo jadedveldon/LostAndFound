@@ -58,7 +58,7 @@ export function YouLeaveWith() {
             </div>
             <div className="mt-10">
               <a href="#request-invite" className="btn btn-primary">
-                Apply Now →
+                Request Your Invite
               </a>
             </div>
           </div>

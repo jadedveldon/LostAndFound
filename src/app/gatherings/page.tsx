@@ -5,7 +5,6 @@ import { Hero } from "@/components/sri-lanka/Hero";
 import { StickyBanner } from "@/components/sri-lanka/StickyBanner";
 import { ChaoticVacationOverlay } from "@/components/sri-lanka/ChaoticVacationOverlay";
 import { WhatThisActuallyIs } from "@/components/sri-lanka/WhatThisActuallyIs";
-import { YouLeaveWith } from "@/components/sri-lanka/YouLeaveWith";
 import { StayGallery } from "@/components/sri-lanka/StayGallery";
 import { ExperienceGrid } from "@/components/sri-lanka/ExperienceGrid";
 import { WhatsIncluded } from "@/components/sri-lanka/WhatsIncluded";
@@ -13,7 +12,6 @@ import { AboutTanya } from "@/components/sri-lanka/AboutTanya";
 import { LogisticsStrip } from "@/components/sri-lanka/LogisticsStrip";
 import { Countdown } from "@/components/sri-lanka/Countdown";
 import { FAQ } from "@/components/sri-lanka/FAQ";
-import { FinalCTA } from "@/components/sri-lanka/FinalCTA";
 import { InviteForm } from "@/components/sri-lanka/InviteForm";
 
 export const metadata: Metadata = {
@@ -37,16 +35,14 @@ export default function GatheringsSriLankaPage() {
         <StickyBanner />
         <ChaoticVacationOverlay />
         <WhatThisActuallyIs />
-        <YouLeaveWith />
-        <StayGallery />
+<StayGallery />
         <ExperienceGrid />
         <WhatsIncluded />
         <AboutTanya />
         <LogisticsStrip />
         <Countdown />
         <FAQ />
-        <FinalCTA />
-        <InviteForm />
+<InviteForm />
       </main>
       <Footer />
     </>

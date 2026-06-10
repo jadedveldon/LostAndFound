@@ -1,10 +1,10 @@
 import React from "react";
 
 const logisticsCols = [
-  { label: "DATES", value: "Aug 20–26, 2026" },
-  { label: "WHERE", value: "Ahangama, Sri Lanka" },
-  { label: "COHORT", value: "12 travellers · hosted" },
-  { label: "PRICE", value: "From $1,200 USD" },
+  { label: "DATES", value: "Aug 20–26, 2026", subtext: "" },
+  { label: "WHERE", value: "Ahangama, Sri Lanka", subtext: "" },
+  { label: "NO. OF PEOPLE", value: "12 travellers", subtext: "" },
+  { label: "EARLY BIRD PRICE", value: "$1,200 USD", subtext: "Double sharing" },
 ];
 
 export function LogisticsStrip() {
@@ -18,13 +18,16 @@ export function LogisticsStrip() {
             <div key={col.label} className="border-l border-[var(--ink)]/15 pl-6">
               <span className="t-eyebrow text-[var(--ink-mute)] block mb-2">{col.label}</span>
               <span className="t-h4 text-[var(--ink)]">{col.value}</span>
+              {col.subtext && (
+                <span className="t-mono text-[var(--ink-mute)] text-xs block mt-1">{col.subtext}</span>
+              )}
             </div>
           ))}
         </div>
 
         {/* Inclusions strip */}
         <p className="t-mono text-[var(--ink-mute)] text-center tracking-widest text-xs mb-6">
-          STAY INCLUDED · MOST MEALS INCLUDED · LOCAL EXPERIENCES INCLUDED · AIRPORT PICKUPS INCLUDED · FLIGHTS NOT INCLUDED
+          For private stay options or group bookings contact host
         </p>
 
         {/* Deposit note */}

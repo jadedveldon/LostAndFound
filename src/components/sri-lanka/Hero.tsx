@@ -4,7 +4,6 @@ import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { HandUnderline } from "@/components/illustrations/hand";
-import { Placeholder } from "@/components/ui/Placeholder";
 
 function smoothScrollTo(id: string, reducedMotion: boolean) {
   const el = document.getElementById(id);
@@ -48,7 +47,7 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.24 }}
             >
-              <span className="inline-script-accent hero-script" style={{ fontSize: 'clamp(72px, 11.5vw, 148px)' }}>
+              <span className="inline-script-accent hero-script" style={{ fontSize: 'clamp(72px, 11.5vw, 148px)', marginTop: '-70px', marginBottom: '-70px', marginLeft: '300px', display: 'block' }}>
                 Slow Travel
               </span>
             </motion.span>
@@ -78,7 +77,7 @@ export function Hero() {
               Request My Invite
             </MagneticButton>
             <button
-              onClick={() => smoothScrollTo("what-this-actually-is", !!shouldReduceMotion)}
+              onClick={() => smoothScrollTo("where-you-will-stay", !!shouldReduceMotion)}
               className="btn-ghost-hand relative"
               aria-label="Explore the gathering"
             >
@@ -98,9 +97,15 @@ export function Hero() {
           </motion.p>
         </div>
 
-        {/* Right Column — placeholder */}
+        {/* Right Column — hero image */}
         <div className="w-full lg:w-[48%] flex items-stretch">
-          <Placeholder className="w-full" style={{ minHeight: 480 }} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/l&f Website - sri lanka - hero banner.png"
+            alt="Sri Lanka gathering — Ahangama"
+            className="w-full h-full object-cover"
+            style={{ minHeight: 480 }}
+          />
         </div>
       </div>
     </section>

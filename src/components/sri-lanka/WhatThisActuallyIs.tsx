@@ -42,14 +42,14 @@ export function WhatThisActuallyIs() {
               </p>
               {/* TODO[ASSET]: replace src with /images/sri-lanka/wellness-retreat.jpg */}
               <figure
-                className="polaroid self-start"
+                className="polaroid w-full"
                 style={{ transform: "rotate(2deg)" }}
               >
                 <TreatedImage
-                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop"
+                  src="/images/l&f Website - 10.png"
                   alt="Yoga wellness retreat scene"
-                  className="w-full aspect-[4/3] object-cover"
-                  style={{ objectFit: "cover" }}
+                  className="w-full ![aspect-ratio:4/1]"
+                  style={{ width: "100%", height: "auto", display: "block" }}
                 />
                 <figcaption className="caption">the wellness route</figcaption>
               </figure>
@@ -67,14 +67,14 @@ export function WhatThisActuallyIs() {
               </p>
               {/* TODO[ASSET]: replace src with /images/sri-lanka/adventure-trip.jpg */}
               <figure
-                className="polaroid self-start"
+                className="polaroid w-full"
                 style={{ transform: "rotate(-3deg)" }}
               >
                 <TreatedImage
-                  src="https://images.unsplash.com/photo-1530143584546-02191bc84eb5?q=80&w=600&auto=format&fit=crop"
+                  src="/images/l&f Website - 11.png"
                   alt="Adventure trip rafting high-energy group scene"
-                  className="w-full aspect-[4/3] object-cover"
-                  style={{ objectFit: "cover" }}
+                  className="w-full ![aspect-ratio:4/1]"
+                  style={{ width: "100%", height: "auto", display: "block" }}
                 />
                 <figcaption className="caption">the adventure route</figcaption>
               </figure>
@@ -109,39 +109,10 @@ export function WhatThisActuallyIs() {
       {/* CTA after enough image */}
       <div className="bg-[var(--paper-deep)] py-[var(--space-12)] text-center">
         <a href="#request-invite" className="btn btn-primary px-10 py-4 tracking-widest text-sm">
-          Apply Now →
+          Request Your Invite
         </a>
       </div>
 
-      {/* Sub-section D — Framing close */}
-      <div className="bg-[var(--paper-warm)] py-[var(--space-24)]">
-        <div className="container max-w-[640px] mx-auto px-6 lg:px-16 text-center">
-          <p
-            className="t-mono text-[var(--wheat)] mb-8"
-            style={{ letterSpacing: "0.2em", opacity: 0.6 }}
-          >
-            ✦
-          </p>
-          <motion.p
-            className="t-h3-italic text-[var(--denim)] mb-6 leading-[1.55]"
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <em>This isn&apos;t about escaping your life. Nor is it about fixing yourself either.</em>
-          </motion.p>
-          <motion.p
-            className="t-body-lg text-[var(--ink-soft)] leading-[1.65]"
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-          >
-            It&apos;s about: good food, music-filled evenings, ocean air, meaningful conversations, local culture, solo exploration, beautiful people, and remembering what life feels like when it slows down.
-          </motion.p>
-        </div>
-      </div>
 
     </section>
   );

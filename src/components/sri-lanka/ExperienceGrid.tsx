@@ -9,7 +9,6 @@ const experiences = [
   "Journal & Self Reflection",
   "Growth Mindset Building",
   "Curated Meals & Community Building",
-  "Jam Sessions with Locals",
   "Cook With Me Session",
   "Wildlife & Sustainable Travel Awareness",
   "Solo Travel Day",
@@ -36,8 +35,8 @@ export function ExperienceGrid() {
           <span className="t-eyebrow text-[var(--ink-mute)] block mb-4">
             WHAT WE&apos;LL DO
           </span>
-          <h2 className="t-display-2 text-[var(--ink)]">
-            What We&apos;ll Experience Together
+          <h2 className="t-h1 text-[var(--ink)]">
+            Activities Curated For You
           </h2>
         </motion.div>
 
@@ -54,16 +53,7 @@ export function ExperienceGrid() {
                 ease: [0.22, 1, 0.36, 1],
                 delay: shouldReduceMotion ? 0 : idx * 0.05,
               }}
-              className="group px-5 py-4 bg-[var(--paper-deep)] border border-[var(--ink)]/[0.08]"
-              style={{
-                borderRadius: 0,
-                transition: "border-color 0.3s cubic-bezier(0.22,1,0.36,1)",
-              }}
-              whileHover={
-                shouldReduceMotion
-                  ? {}
-                  : { borderColor: "rgba(206,71,55,0.40)" }
-              }
+              className="px-5 py-4"
             >
               <div className="flex items-baseline gap-2">
                 <span
@@ -86,11 +76,10 @@ export function ExperienceGrid() {
           viewport={{ once: true, margin: "-8%" }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           className="t-h3-italic text-center mx-auto mt-12"
-          style={{ maxWidth: 640 }}
+          style={{ maxWidth: 1100 }}
         >
-          <em>Every day is intentionally flexible. There&apos;s enough structure to
-          feel guided, and enough freedom to truly experience the place at your
-          pace.</em>
+          <em>Every day is intentionally flexible. There&apos;s enough structure to<br />
+          feel guided, and enough freedom to truly experience the days at your pace.</em>
         </motion.p>
       </div>
     </section>

@@ -24,12 +24,11 @@ const FAQS = [
   },
   {
     question: "How many people are joining?",
-    answer: "A very small curated group. 12 travellers max.",
+    answer: "12 selected travellers",
   },
   {
     question: "What's the payment structure?",
-    answer:
-      "30% deposit now. 30% two months before the trip. Remaining payment due 15 days before departure.",
+    answer: "30% deposit now. 30% one month before the trip. Remaining payment due 15 days before departure.",
   },
 ];
 
@@ -51,7 +50,7 @@ export function FAQ() {
             QUESTIONS
           </span>
           <h2 className="t-display-2 text-[var(--ink)]">
-            Things people ask.
+            Frequently Asked Questions
           </h2>
         </div>
 
