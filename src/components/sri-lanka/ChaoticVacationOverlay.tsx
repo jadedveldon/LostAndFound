@@ -36,8 +36,8 @@ export function ChaoticVacationOverlay() {
             maxWidth: 860,
             fontFamily: "var(--font-display)",
             color: "var(--paper)",
-            fontSize: "clamp(32px, 3.5vw, 52px)",
-            lineHeight: 1.15,
+            fontSize: "clamp(22px, 4vw, 52px)",
+            lineHeight: 1.2,
             textShadow: "0 2px 18px rgba(31,29,26,0.42)",
           }}
           initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}

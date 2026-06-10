@@ -47,7 +47,7 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.24 }}
             >
-              <span className="inline-script-accent hero-script" style={{ fontSize: 'clamp(72px, 11.5vw, 148px)', marginTop: '-70px', marginBottom: '-70px', marginLeft: '300px', display: 'block' }}>
+              <span className="inline-script-accent hero-script hero-script-offset" style={{ fontSize: 'clamp(60px, 11.5vw, 148px)' }}>
                 Slow Travel
               </span>
             </motion.span>
@@ -103,8 +103,7 @@ export function Hero() {
           <img
             src="/images/l&f Website - sri lanka - hero banner.png"
             alt="Sri Lanka gathering — Ahangama"
-            className="w-full h-full object-cover"
-            style={{ minHeight: 480 }}
+            className="w-full h-auto object-cover lg:h-full lg:min-h-[480px]"
           />
         </div>
       </div>

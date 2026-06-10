@@ -876,6 +876,20 @@
     display: inline-block;
     animation: handwrite 1100ms cubic-bezier(0.22, 1, 0.36, 1) 350ms both;
   }
+
+  /* "Slow Travel" positional offset — mobile clean, desktop dramatic */
+  .hero-script-offset {
+    margin-left: 0;
+    margin-top: -6px;
+    margin-bottom: -6px;
+  }
+  @media (min-width: 1024px) {
+    .hero-script-offset {
+      margin-left: 300px;
+      margin-top: -70px;
+      margin-bottom: -70px;
+    }
+  }
 }
 
 @keyframes handwrite {

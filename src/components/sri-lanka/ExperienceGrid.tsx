@@ -78,8 +78,8 @@ export function ExperienceGrid() {
           className="t-h3-italic text-center mx-auto mt-12"
           style={{ maxWidth: 1100 }}
         >
-          <em>Every day is intentionally flexible. There&apos;s enough structure to<br />
-          feel guided, and enough freedom to truly experience the days at your pace.</em>
+          <em>Every day is intentionally flexible. There&apos;s enough structure to<br className="hidden lg:inline" />
+          {" "}feel guided, and enough freedom to truly experience the days at your pace.</em>
         </motion.p>
       </div>
     </section>
