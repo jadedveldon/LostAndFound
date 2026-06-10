@@ -594,6 +594,27 @@
     box-shadow: inset 0 0 90px 24px rgba(31, 29, 26, 0.14);
   }
 
+  /* "in between" band — full image on mobile (no crop), cinematic cover on desktop */
+  .between-band {
+    display: block;
+    width: 100%;
+  }
+  .between-band > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  @media (min-width: 1024px) {
+    .between-band {
+      height: 60vh;
+      min-height: 320px;
+    }
+    .between-band > img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   .tape {
     position: absolute;
     width: 92px;

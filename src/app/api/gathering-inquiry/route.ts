@@ -150,7 +150,7 @@ export async function POST(req: NextRequest) {
     if (recipientEmail) {
       try {
         await resend.emails.send({
-          from: 'Lost & Found <hello@lostandfoundtravel.in>',
+          from: 'Lost & Found Travel <hello@lostandfoundtravel.in>',
           to: recipientEmail,
           replyTo: email,
           subject: `New Sri Lanka Gathering invite request — ${name}`,
@@ -164,7 +164,7 @@ export async function POST(req: NextRequest) {
     // Confirmation email to applicant
     try {
       await resend.emails.send({
-        from: 'Tanya & Keerthi <hello@lostandfoundtravel.in>',
+        from: 'Lost & Found Travel <hello@lostandfoundtravel.in>',
         to: email,
         subject: 'we got your application — Lost & Found',
         html: confirmationEmailHtml(getFirstName(name)),

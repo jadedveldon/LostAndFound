@@ -84,16 +84,13 @@ export function WhatThisActuallyIs() {
         </div>
       </div>
 
-      {/* Sub-section C — Full-bleed "in between" image */}
-      <div className="relative w-full overflow-hidden" style={{ height: "60vh", minHeight: 320 }}>
-        <div className="absolute inset-0">
-          <TreatedImage
-            src="/images/between.png"
-            alt="We exist somewhere in between"
-            className="w-full h-full"
-            style={{ objectFit: "cover", height: "100%" }}
-          />
-        </div>
+      {/* Sub-section C — "in between" image: full on mobile, cinematic cover on desktop */}
+      <div className="w-full overflow-hidden">
+        <TreatedImage
+          src="/images/between.png"
+          alt="We exist somewhere in between"
+          className="between-band"
+        />
       </div>
 
       {/* Enough — image band */}
