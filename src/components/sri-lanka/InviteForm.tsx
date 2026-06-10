@@ -83,9 +83,6 @@ export function InviteForm() {
         <div className="text-center mb-10">
           <span className="t-eyebrow text-[var(--ink-mute)] block mb-4">REQUEST YOUR INVITE</span>
           <h2 className="t-display-2 text-[var(--ink)] mb-4">Tell us a little about you.</h2>
-          <p className="t-h3-italic text-[var(--denim)] max-w-[480px] mx-auto">
-            <em>We read every application ourselves.</em>
-          </p>
         </div>
 
         {submitState === "success" ? (

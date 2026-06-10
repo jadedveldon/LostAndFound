@@ -28,7 +28,7 @@ export function LogisticsStrip() {
         </p>
 
         {/* Deposit note */}
-        <p className="t-mono text-[var(--ink-mute)] text-center tracking-widest text-xs mt-6">
+        <p className="t-mono text-[var(--clay)] text-center tracking-widest text-xs mt-6 font-bold">
           30% DEPOSIT · $360 USD · TO SECURE YOUR SPOT
         </p>
 

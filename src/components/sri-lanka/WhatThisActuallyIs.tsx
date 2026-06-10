@@ -106,6 +106,13 @@ export function WhatThisActuallyIs() {
         />
       </div>
 
+      {/* CTA after enough image */}
+      <div className="bg-[var(--paper-deep)] py-[var(--space-12)] text-center">
+        <a href="#request-invite" className="btn btn-primary px-10 py-4 tracking-widest text-sm">
+          Apply Now →
+        </a>
+      </div>
+
       {/* Sub-section D — Framing close */}
       <div className="bg-[var(--paper-warm)] py-[var(--space-24)]">
         <div className="container max-w-[640px] mx-auto px-6 lg:px-16 text-center">

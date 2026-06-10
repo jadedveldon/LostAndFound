@@ -87,6 +87,11 @@ export function ChaoticVacationOverlay() {
               >
                 <em>This gathering was created for exactly that.</em>
               </motion.p>
+              <div className="mt-8">
+                <a href="#request-invite" className="btn btn-primary">
+                  Apply Now →
+                </a>
+              </div>
             </div>
 
             {/* Right column — image placeholder */}

@@ -56,6 +56,11 @@ export function YouLeaveWith() {
                 </motion.p>
               ))}
             </div>
+            <div className="mt-10">
+              <a href="#request-invite" className="btn btn-primary">
+                Apply Now →
+              </a>
+            </div>
           </div>
 
         </div>

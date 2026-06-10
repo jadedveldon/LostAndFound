@@ -64,7 +64,7 @@ export function FinalCTA() {
 
           {/* Urgency line */}
           <p className="t-body-italic text-[var(--denim)] mb-10">
-            Applications close July 15th.
+            Applications close July 1st.
           </p>
 
           {/* CTA button */}

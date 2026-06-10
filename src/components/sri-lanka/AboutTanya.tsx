@@ -133,6 +133,7 @@ export function AboutTanya() {
               </p>
             </motion.div>
 
+
           </div>
         </div>
       </div>

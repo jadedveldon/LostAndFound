@@ -85,12 +85,12 @@ export function ExperienceGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-8%" }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-          className="t-body-lg italic text-[var(--denim)] text-center mx-auto mt-12"
+          className="t-h3-italic text-center mx-auto mt-12"
           style={{ maxWidth: 640 }}
         >
-          Every day is intentionally flexible. There&apos;s enough structure to
+          <em>Every day is intentionally flexible. There&apos;s enough structure to
           feel guided, and enough freedom to truly experience the place at your
-          pace.
+          pace.</em>
         </motion.p>
       </div>
     </section>

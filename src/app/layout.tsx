@@ -34,6 +34,7 @@ export const metadata: Metadata = {
 
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { MotionProvider } from "@/components/layout/MotionProvider";
+import { Agentation } from "agentation";
 
 export default function RootLayout({
   children,
@@ -59,6 +60,7 @@ export default function RootLayout({
         <MotionProvider>
           {children}
         </MotionProvider>
+        {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>
   );

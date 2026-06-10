@@ -1,25 +1,25 @@
 import React from "react";
 
 const includedItems = [
-  "6 nights / 7 days accommodation",
-  "Curated villa stay",
-  "Daily meals & snacks",
-  "Yoga & movement sessions",
-  "Workshops & experiences",
-  "Local transport for planned activities",
-  "Community events",
-  "Airport guidance & coordination",
-  "Welcome gifting",
-  "Curated host support throughout",
-  "Fun locally crafted goodie bags",
+  "6 Nights / 7 Days Accommodation",
+  "Curated Villa Stay",
+  "Daily Meals & Snacks",
+  "Yoga & Movement Sessions",
+  "Workshops & Experiences",
+  "Local Transport For Planned Activities",
+  "Community Events",
+  "Airport Guidance & Coordination",
+  "Welcome Gifting",
+  "Curated Host Support Throughout",
+  "Fun Locally Crafted Goodie Bags",
 ];
 
 const notIncludedItems = [
-  "International flights",
-  "Visa fees",
-  "Personal shopping",
-  "Optional add-on activities",
-  "Solo exploration day costs",
+  "International Flights",
+  "Visa Fees",
+  "Personal Shopping",
+  "Optional Add-On Activities",
+  "Solo Exploration Day Costs",
 ];
 
 export function WhatsIncluded() {
@@ -35,16 +35,16 @@ export function WhatsIncluded() {
           <p className="t-eyebrow text-[var(--ink-mute)] mb-4">
             WHAT&rsquo;S INCLUDED
           </p>
-          <h2 className="t-display-2 text-[var(--ink)]">
+          <h2 className="t-h1 text-[var(--ink)] whitespace-nowrap">
             Everything taken care of.
           </h2>
         </div>
 
-        {/* Two-column layout */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+        {/* Two-column layout with vertical separator */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-0">
 
           {/* Left — Included */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 lg:pr-16 lg:border-r lg:border-[var(--ink)]/10">
             <h3 className="t-h3-italic text-[var(--moss)] mb-8">
               <em>included</em>
             </h3>
@@ -68,7 +68,7 @@ export function WhatsIncluded() {
           </div>
 
           {/* Right — Not Included */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 lg:pl-16">
             <h3 className="t-h3-italic text-[var(--clay)] mb-8">
               <em>not included</em>
             </h3>
@@ -92,6 +92,14 @@ export function WhatsIncluded() {
           </div>
 
         </div>
+
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <a href="#request-invite" className="btn btn-primary px-10 py-4 tracking-widest text-sm">
+            Apply Now →
+          </a>
+        </div>
+
       </div>
     </section>
   );
