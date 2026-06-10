@@ -35,14 +35,14 @@ export default function GatheringsSriLankaPage() {
         <StickyBanner />
         <ChaoticVacationOverlay />
         <WhatThisActuallyIs />
-<StayGallery />
+        <StayGallery />
         <ExperienceGrid />
         <WhatsIncluded />
         <AboutTanya />
         <LogisticsStrip />
         <Countdown />
         <FAQ />
-<InviteForm />
+        <InviteForm />
       </main>
       <Footer />
     </>

@@ -55,7 +55,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Oranienbaum:ital@1&display=swap"
         />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
         <SmoothScroll />
         <MotionProvider>
           {children}

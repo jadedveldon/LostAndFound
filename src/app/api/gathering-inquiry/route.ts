@@ -62,16 +62,17 @@ function confirmationEmailHtml(firstName: string): string {
 <html>
 <head><meta charset="utf-8" /></head>
 <body style="font-family:Georgia,serif;background:#f6efe6;color:#000;padding:40px 24px;max-width:600px;margin:0 auto;">
-  <p style="font-family:'Hammersmith One',sans-serif;font-size:22px;letter-spacing:0.05em;margin:0 0 40px;">Lost&amp;Found</p>
+  <p style="font-family:'Hammersmith One',sans-serif;font-size:22px;letter-spacing:0.05em;margin:0 0 40px;">Lost &amp; Found Travel</p>
   <p style="font-size:18px;line-height:1.7;">hey ${escHtml(firstName)},</p>
-  <p style="font-size:18px;line-height:1.7;font-style:italic;color:#38678a;margin:16px 0;">we&rsquo;ve got your note. we read everything ourselves, so this won&rsquo;t take long.</p>
-  <p style="font-size:16px;line-height:1.7;color:#3d3d3d;margin:24px 0;">
-    if you want to read more about who we are and what we do, here&rsquo;s the journal —<br/>
-    <a href="https://lostandfoundtravel.com/journal" style="color:#38678a;">lostandfoundtravel.com/journal</a>
+  <p style="font-size:16px;line-height:1.8;color:#3d3d3d;margin:20px 0;">
+    thank you so much for filling this out. we&rsquo;re going to take our time going through everything you&rsquo;ve shared — we want to give it the thought it deserves.
   </p>
-  <p style="font-size:20px;font-style:italic;color:#ce4737;margin-top:40px;">— tanya &amp; keerthi</p>
+  <p style="font-size:16px;line-height:1.8;color:#3d3d3d;margin:20px 0;">
+    we&rsquo;ll get back to you soon.
+  </p>
+  <p style="font-size:18px;font-style:italic;color:#ce4737;margin-top:40px;">— Lost &amp; Found Travel</p>
   <hr style="border:none;border-top:1px solid #ece0d0;margin:40px 0 16px;" />
-  <p style="font-size:12px;color:#97896e;">Lost &amp; Found · lostandfoundtravel.com</p>
+  <p style="font-size:12px;color:#97896e;">Lost &amp; Found Travel · lostandfoundtravel.in</p>
 </body>
 </html>`;
 }
@@ -149,7 +150,7 @@ export async function POST(req: NextRequest) {
     if (recipientEmail) {
       try {
         await resend.emails.send({
-          from: 'Lost & Found <hello@lostandfoundtravel.com>',
+          from: 'Lost & Found <hello@lostandfoundtravel.in>',
           to: recipientEmail,
           replyTo: email,
           subject: `New Sri Lanka Gathering invite request — ${name}`,
@@ -163,7 +164,7 @@ export async function POST(req: NextRequest) {
     // Confirmation email to applicant
     try {
       await resend.emails.send({
-        from: 'Tanya & Keerthi <hello@lostandfoundtravel.com>',
+        from: 'Tanya & Keerthi <hello@lostandfoundtravel.in>',
         to: email,
         subject: 'we got your application — Lost & Found',
         html: confirmationEmailHtml(getFirstName(name)),

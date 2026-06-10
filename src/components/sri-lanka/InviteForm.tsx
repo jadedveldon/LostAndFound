@@ -18,7 +18,6 @@ const schema = z.object({
     .string()
     .min(12, "Tell us a little more — at least a sentence or two")
     .max(4000, "Please keep it under 4000 characters"),
-  website: z.string().max(0).optional(), // honeypot — must stay empty
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -27,23 +26,16 @@ type SubmitState = "idle" | "submitting" | "success" | "error";
 
 export function InviteForm() {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
-
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
-    defaultValues: { website: "" },
+    defaultValues: {},
   });
 
   async function onSubmit(data: FormValues) {
-    // Silently succeed if honeypot filled
-    if (data.website) {
-      setSubmitState("success");
-      return;
-    }
-
     setSubmitState("submitting");
     try {
       const res = await fetch("/api/gathering-inquiry", {
@@ -100,12 +92,12 @@ export function InviteForm() {
               <span style={{ color: "var(--wheat)" }}>✦</span>
             </p>
             <p className="t-body text-[var(--ink-soft)]">
-              Tanya &amp; Keerthi will reply from{" "}
+              we will reply from{" "}
               <a
-                href="mailto:hello@lostandfoundtravel.com"
+                href="mailto:curator@lostandfoundtravel.in"
                 className="text-[var(--denim)] underline underline-offset-2"
               >
-                hello@lostandfoundtravel.com
+                curator@lostandfoundtravel.in
               </a>
               .
             </p>
@@ -113,16 +105,6 @@ export function InviteForm() {
         ) : (
           /* Form */
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
-
-            {/* Honeypot — hidden from real users */}
-            <input
-              type="text"
-              tabIndex={-1}
-              autoComplete="off"
-              aria-hidden="true"
-              {...register("website")}
-              style={{ position: "absolute", left: -9999, width: 1, height: 1, opacity: 0 }}
-            />
 
             {/* Name */}
             <FormField
@@ -216,7 +198,8 @@ export function InviteForm() {
             {/* Submit */}
             <div className="flex flex-col items-center gap-4 mt-8">
               <MagneticButton
-                type="submit"
+                type="button"
+                onClick={() => handleSubmit(onSubmit)()}
                 disabled={isSubmitting}
                 aria-label="Send my application"
               >

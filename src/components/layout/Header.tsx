@@ -19,8 +19,8 @@ export function Header() {
 
         {/* Brand */}
         <Link href="/" className="flex flex-col group shrink-0">
-          <span className="uppercase tracking-[0.05em] leading-none text-[var(--ink)]" style={{ fontFamily: 'var(--font-display)', fontSize: '22px' }}>Lost&amp;Found</span>
-          <span className="t-eyebrow text-[10px] mt-1.5 tracking-widest text-[var(--ink-soft)]">Personal Travel Curators</span>
+          <span className="uppercase leading-none text-[var(--ink)]" style={{ fontFamily: 'var(--font-display)', fontSize: '22px', letterSpacing: '0.06em' }}>Lost &amp; Found</span>
+          <span className="mt-1.5 text-[var(--ink-soft)]" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>Personal Travel Curators</span>
         </Link>
 
         {/* Desktop Nav */}
