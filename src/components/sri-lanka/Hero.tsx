@@ -47,7 +47,7 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.24 }}
             >
-              <span className="inline-script-accent hero-script hero-script-offset" style={{ fontSize: 'clamp(60px, 11.5vw, 148px)' }}>
+              <span className="inline-script-accent hero-script hero-script-offset">
                 Slow Travel
               </span>
             </motion.span>

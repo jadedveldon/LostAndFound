@@ -898,17 +898,26 @@
     animation: handwrite 1100ms cubic-bezier(0.22, 1, 0.36, 1) 350ms both;
   }
 
-  /* "Slow Travel" positional offset — mobile clean, desktop dramatic */
+  /* "Slow Travel" — desktop has the dramatic offset; margins drop away as the screen shrinks */
   .hero-script-offset {
-    margin-left: 0;
-    margin-top: -6px;
-    margin-bottom: -6px;
+    display: block;
+    white-space: nowrap;
+    font-size: 148px;
+    margin-left: 250px;
+    margin-top: -70px;
+    margin-bottom: -70px;
   }
-  @media (min-width: 1024px) {
+  @media (max-width: 1131px) {
     .hero-script-offset {
-      margin-left: 300px;
-      margin-top: -70px;
-      margin-bottom: -70px;
+      font-size: 84px;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 520px) {
+    .hero-script-offset {
+      font-size: 60px;
     }
   }
 }
