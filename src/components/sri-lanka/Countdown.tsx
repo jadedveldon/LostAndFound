@@ -120,6 +120,9 @@ export function Countdown() {
               fontSize: "clamp(36px, 5vw, 56px)",
             }}
           >
+            ₹1,15,000
+          </p>
+          <p className="t-mono text-[var(--paper)] opacity-50 text-sm tracking-widest mt-1">
             $1,200 USD
           </p>
           <p className="t-mono text-[var(--paper)] opacity-70 text-xs tracking-widest mt-2">

@@ -4,7 +4,7 @@ const logisticsCols = [
   { label: "DATES", value: "Aug 20–26, 2026", subtext: "" },
   { label: "WHERE", value: "Ahangama, Sri Lanka", subtext: "" },
   { label: "NO. OF PEOPLE", value: "12 travellers", subtext: "" },
-  { label: "EARLY BIRD PRICE", value: "$1,200 USD", subtext: "Double sharing" },
+  { label: "EARLY BIRD PRICE", value: "₹1,15,000", subtext: "$1,200 USD · Double sharing" },
 ];
 
 export function LogisticsStrip() {
