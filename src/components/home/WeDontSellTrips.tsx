@@ -31,7 +31,7 @@ export function WeDontSellTrips() {
           </p>
 
           <span className="t-mono text-[var(--ink-mute)] tracking-widest uppercase text-xs">
-            — Tanya &amp; Keerthi, Founders
+            — Tanya &amp; Keerthi, Co-Founders
           </span>
         </div>
 

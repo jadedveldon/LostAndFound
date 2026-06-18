@@ -41,7 +41,7 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto mt-4">
             <a href="/experiences"><MagneticButton>Explore Gatherings</MagneticButton></a>
-            <a href="/plan-with-us" className="btn-ghost-hand">
+            <a href="https://calendly.com/curator-lostandfoundtravel/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost-hand">
               Plan a personal journey
               <HandUnderline className="btn-underline" />
             </a>
@@ -64,9 +64,9 @@ export function Hero() {
       {/* Marquee Strip */}
       <div className="w-full absolute bottom-0 left-0 marquee border-t border-b border-[var(--paper-deep)]">
         <div className="marquee-track t-mono text-xs text-[var(--ink)] tracking-wider">
-          <span>SRI LANKA — RELEARN THE ART OF SLOW TRAVEL · AUG 20–26, 2026 · BLOCK YOUR SLOT NOW ✦ THE SLOW TRANSIT · AHANGAMA · 10–14 TRAVELLERS · HOSTED EXPERIENCE ✦ L&amp;F EXPERIENCE — CURATION OPEN ALL YEAR ✦ </span>
-          <span>SRI LANKA — RELEARN THE ART OF SLOW TRAVEL · AUG 20–26, 2026 · BLOCK YOUR SLOT NOW ✦ THE SLOW TRANSIT · AHANGAMA · 10–14 TRAVELLERS · HOSTED EXPERIENCE ✦ L&amp;F EXPERIENCE — CURATION OPEN ALL YEAR ✦ </span>
-          <span>SRI LANKA — RELEARN THE ART OF SLOW TRAVEL · AUG 20–26, 2026 · BLOCK YOUR SLOT NOW ✦ THE SLOW TRANSIT · AHANGAMA · 10–14 TRAVELLERS · HOSTED EXPERIENCE ✦ L&amp;F EXPERIENCE — CURATION OPEN ALL YEAR ✦ </span>
+          <span>SRI LANKA — RELEARN THE ART OF SLOW TRAVEL · AUG 20–26, 2026 · REQUEST YOUR INVITE ✦ AHANGAMA · 10 TRAVELLERS · HOSTED EXPERIENCE · EARLY BIRD PRICING CLOSING SOON ✦ L&amp;F EXPERIENCE — CURATION OPEN ALL YEAR ✦ </span>
+          <span>SRI LANKA — RELEARN THE ART OF SLOW TRAVEL · AUG 20–26, 2026 · REQUEST YOUR INVITE ✦ AHANGAMA · 10 TRAVELLERS · HOSTED EXPERIENCE · EARLY BIRD PRICING CLOSING SOON ✦ L&amp;F EXPERIENCE — CURATION OPEN ALL YEAR ✦ </span>
+          <span>SRI LANKA — RELEARN THE ART OF SLOW TRAVEL · AUG 20–26, 2026 · REQUEST YOUR INVITE ✦ AHANGAMA · 10 TRAVELLERS · HOSTED EXPERIENCE · EARLY BIRD PRICING CLOSING SOON ✦ L&amp;F EXPERIENCE — CURATION OPEN ALL YEAR ✦ </span>
         </div>
       </div>
     </section>

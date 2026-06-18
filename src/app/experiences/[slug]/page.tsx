@@ -53,7 +53,7 @@ export default function ExperienceDetail() {
               </div>
               <div className="flex flex-col border-l border-[var(--ink)]/20 pl-6">
                 <span className="t-mono text-[10px] uppercase text-[var(--ink-mute)] mb-2">Cohort</span>
-                <span className="t-body-lg text-[var(--ink)]">12 travellers maximum</span>
+                <span className="t-body-lg text-[var(--ink)]">10 travellers maximum</span>
               </div>
               <div className="flex flex-col border-l border-[var(--ink)]/20 pl-6">
                 <span className="t-mono text-[10px] uppercase text-[var(--ink-mute)] mb-2">Host</span>

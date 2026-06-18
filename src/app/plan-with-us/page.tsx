@@ -31,9 +31,11 @@ export default function PlanWithUsPage() {
                 A trip designed entirely around how you travel. Where you want to go. How fast. With whom. We curate, you arrive.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" className="bg-[var(--clay)] text-[var(--paper)] hover:bg-[var(--clay-deep)] border-none">
-                  Tell us about your trip →
-                </Button>
+                <a href="https://calendly.com/curator-lostandfoundtravel/30min" target="_blank" rel="noopener noreferrer">
+                  <Button variant="primary" className="bg-[var(--clay)] text-[var(--paper)] hover:bg-[var(--clay-deep)] border-none">
+                    Tell us about your trip →
+                  </Button>
+                </a>
                 <Button variant="ghost" className="border-[var(--ink)] text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--paper)]">
                   Read past Experiences
                 </Button>
@@ -109,11 +111,11 @@ export default function PlanWithUsPage() {
         <section className="w-full band-clay py-24 text-center">
           <div className="container max-w-2xl">
             <h2 className="t-h2 text-[var(--paper)] mb-8">Ready to think about your next trip?</h2>
-            <Link href="/inquire">
+            <a href="https://calendly.com/curator-lostandfoundtravel/30min" target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" className="bg-transparent border border-[var(--paper)] text-[var(--paper)] hover:bg-[var(--paper)] hover:text-[var(--clay)]">
                 Tell us about it →
               </Button>
-            </Link>
+            </a>
           </div>
         </section>
 

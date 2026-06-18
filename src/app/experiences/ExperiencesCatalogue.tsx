@@ -128,9 +128,9 @@ export function ExperiencesCatalogue() {
         {/* Bottom Band */}
         <section className="w-full py-16 text-center border-t border-[var(--paper-deep)]">
           <p className="t-body mb-4 text-[var(--ink-soft)]">Don&apos;t see the right one?</p>
-          <Link href="/plan-with-us" className="t-h3-italic text-[var(--clay)] hover:text-[var(--clay-deep)] transition-colors">
+          <a href="https://calendly.com/curator-lostandfoundtravel/30min" target="_blank" rel="noopener noreferrer" className="t-h3-italic text-[var(--clay)] hover:text-[var(--clay-deep)] transition-colors">
             Plan a personal Experience →
-          </Link>
+          </a>
         </section>
 
       </main>

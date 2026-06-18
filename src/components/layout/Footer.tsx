@@ -15,8 +15,8 @@ export function Footer() {
             </div>
             <p className="t-body-sm mb-6 max-w-[220px]">Designing slow trips for people in transition.</p>
             <div className="flex gap-3">
-              <span className="w-8 h-8 rounded-full border border-[var(--ink)]/30 flex items-center justify-center text-xs text-[var(--ink-soft)]">Ig</span>
-              <span className="w-8 h-8 rounded-full border border-[var(--ink)]/30 flex items-center justify-center text-xs text-[var(--ink-soft)]">Yt</span>
+              <a href="https://www.instagram.com/lostandfoundtravel_/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-[var(--ink)]/30 flex items-center justify-center text-xs text-[var(--ink-soft)] hover:border-[var(--clay)] hover:text-[var(--clay)] transition-colors">Ig</a>
+              <a href="mailto:curator@lostandfoundtravel.in" className="w-8 h-8 rounded-full border border-[var(--ink)]/30 flex items-center justify-center text-xs text-[var(--ink-soft)] hover:border-[var(--clay)] hover:text-[var(--clay)] transition-colors">✉</a>
             </div>
           </div>
 
@@ -24,7 +24,7 @@ export function Footer() {
             <h4 className="t-eyebrow mb-4 text-[var(--ink-mute)]">Trips</h4>
             <ul className="flex flex-col gap-3">
               <li><Link href="/gatherings" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Gatherings</Link></li>
-              <li><Link href="/plan-with-us" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Plan With Us</Link></li>
+              <li><a href="https://calendly.com/curator-lostandfoundtravel/30min" target="_blank" rel="noopener noreferrer" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Plan With Us</a></li>
               <li><Link href="/decision-detox" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Decision Detox</Link></li>
               <li><Link href="/a-la-carte" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">A La Carte</Link></li>
             </ul>

@@ -41,12 +41,14 @@ export function Header() {
 
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <Link
-            href="/plan-with-us"
+          <a
+            href="https://calendly.com/curator-lostandfoundtravel/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--clay)] text-[var(--paper)] t-mono text-xs uppercase tracking-widest hover:bg-[var(--clay-deep)] transition-colors duration-fast"
           >
             Plan With Us
-          </Link>
+          </a>
 
           {/* Mobile hamburger */}
           <button
@@ -75,13 +77,15 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/plan-with-us"
+          <a
+            href="https://calendly.com/curator-lostandfoundtravel/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
             className="inline-flex items-center justify-center px-5 py-3 bg-[var(--clay)] text-[var(--paper)] t-mono text-xs uppercase tracking-widest mt-2"
           >
             Plan With Us
-          </Link>
+          </a>
         </div>
       )}
     </header>

@@ -17,9 +17,6 @@ export function ExperienceSection() {
     <section className="bg-[var(--paper-deep)] relative overflow-hidden py-24 lg:py-32">
       <div className="container flex flex-col items-center max-w-4xl relative">
 
-        {/* Eyebrow */}
-        <span className="t-eyebrow mb-6 text-center text-[var(--ink-mute)]">THE EXPERIENCE</span>
-
         {/* Large display heading */}
         <h2
           className="text-[clamp(40px,8vw,100px)] text-[var(--clay)] text-center leading-[0.9] mb-10 relative z-20 rotate-[-1deg] select-none"
@@ -53,12 +50,14 @@ export function ExperienceSection() {
         </p>
 
         {/* Bottom link */}
-        <Link
-          href="/plan-with-us"
+        <a
+          href="https://calendly.com/curator-lostandfoundtravel/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="t-h3-italic text-[var(--denim)] text-[clamp(16px,2vw,24px)] hover:text-[var(--denim-deep)] transition-colors relative z-20"
         >
           Learn how it works ↗
-        </Link>
+        </a>
 
       </div>
     </section>
