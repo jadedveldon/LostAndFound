@@ -13,7 +13,7 @@ const archetypes = [
 
 export function WhoWeVibeWith() {
   return (
-    <section className="bg-[var(--paper-deep)] relative overflow-hidden py-24 lg:py-32">
+    <section className="bg-[var(--paper-deep)] relative overflow-hidden py-10 lg:py-14">
       <div className="container flex flex-col items-center max-w-4xl relative">
 
         {/* Large script heading */}
