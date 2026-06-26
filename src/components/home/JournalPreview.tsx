@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { SectionVisible } from '@/components/analytics/SectionVisible';
 
 const categories = [
   'Slow Travel',
@@ -41,7 +42,8 @@ const articles = [
 
 export function JournalPreview() {
   return (
-    <section className="bg-[var(--paper-deep)] py-20 pb-24 lg:py-28 lg:pb-32">
+    <section className="bg-[var(--paper-deep)] py-20 pb-24 lg:py-28 lg:pb-32 relative">
+      <SectionVisible name="journal_preview" />
       {/* Header */}
       <div className="container mb-10">
         <span className="t-eyebrow block mb-5">FROM THE JOURNAL</span>

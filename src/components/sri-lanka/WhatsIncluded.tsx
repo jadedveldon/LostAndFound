@@ -1,4 +1,5 @@
 import React from "react";
+import { SectionVisible } from "@/components/analytics/SectionVisible";
 
 const includedItems = [
   "6 Nights / 7 Days Accommodation",
@@ -25,8 +26,9 @@ export function WhatsIncluded() {
   return (
     <section
       id="whats-included"
-      className="w-full bg-[var(--paper-deep)] py-[var(--space-24)]"
+      className="w-full bg-[var(--paper-deep)] py-[var(--space-24)] relative"
     >
+      <SectionVisible name="gathering_whats_included" />
       <div className="container max-w-4xl mx-auto">
 
         {/* Section header */}

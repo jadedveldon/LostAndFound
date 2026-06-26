@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { SectionVisible } from "@/components/analytics/SectionVisible";
+import { track } from "@/lib/analytics";
 
 const schema = z.object({
   name: z.string().min(1, "Please enter your name").max(120, "Name is too long"),
@@ -26,6 +28,15 @@ type SubmitState = "idle" | "submitting" | "success" | "error";
 
 export function InviteForm() {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
+  const formStarted = useRef(false);
+
+  function handleFormStart() {
+    if (!formStarted.current) {
+      formStarted.current = true;
+      track('form_start', { form_name: 'gathering_invite', gathering: 'sri-lanka-aug-2026' });
+    }
+  }
+
   const {
     register,
     handleSubmit,
@@ -52,9 +63,7 @@ export function InviteForm() {
       });
       if (res.ok || res.status === 200) {
         setSubmitState("success");
-        if (typeof window !== "undefined" && (window as typeof window & { gtag?: Function }).gtag) {
-          (window as typeof window & { gtag: Function }).gtag("event", "gathering_invite_requested");
-        }
+        track('gathering_invite_requested', { gathering: 'sri-lanka-aug-2026' });
       } else if (res.status === 429) {
         setSubmitState("error");
       } else {
@@ -68,7 +77,8 @@ export function InviteForm() {
   const isSubmitting = submitState === "submitting";
 
   return (
-    <section id="request-invite" className="bg-[var(--paper)] w-full py-[var(--space-24)] pb-[var(--space-32)]">
+    <section id="request-invite" className="bg-[var(--paper)] w-full py-[var(--space-24)] pb-[var(--space-32)] relative">
+      <SectionVisible name="gathering_invite_form" />
       <div className="container max-w-[720px] mx-auto px-6 lg:px-16">
 
         {/* Above-form header */}
@@ -104,7 +114,7 @@ export function InviteForm() {
           </div>
         ) : (
           /* Form */
-          <form onSubmit={handleSubmit(onSubmit)} noValidate>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate onFocus={handleFormStart}>
 
             {/* Name */}
             <FormField

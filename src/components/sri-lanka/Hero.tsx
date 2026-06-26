@@ -4,6 +4,8 @@ import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { HandUnderline } from "@/components/illustrations/hand";
+import { SectionVisible } from "@/components/analytics/SectionVisible";
+import { track } from "@/lib/analytics";
 
 function smoothScrollTo(id: string, reducedMotion: boolean) {
   const el = document.getElementById(id);
@@ -16,6 +18,7 @@ export function Hero() {
 
   return (
     <section className="w-full min-h-[90vh] flex flex-col justify-start pt-20 pb-0 bg-[var(--paper)] overflow-hidden">
+      <SectionVisible name="gathering_hero" />
       <div className="container flex flex-col lg:flex-row gap-12 lg:gap-10 py-16 lg:py-24">
 
         {/* Left Column */}
@@ -71,13 +74,13 @@ export function Hero() {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.46 }}
           >
             <MagneticButton
-              onClick={() => smoothScrollTo("request-invite", !!shouldReduceMotion)}
+              onClick={() => { smoothScrollTo("request-invite", !!shouldReduceMotion); track('cta_click', { cta_name: 'request_invite', location: 'gathering_hero' }); }}
               aria-label="Request my invite — scroll to application form"
             >
               Request My Invite
             </MagneticButton>
             <button
-              onClick={() => smoothScrollTo("where-you-will-stay", !!shouldReduceMotion)}
+              onClick={() => { smoothScrollTo("where-you-will-stay", !!shouldReduceMotion); track('cta_click', { cta_name: 'explore_gathering', location: 'gathering_hero' }); }}
               className="btn-ghost-hand relative"
               aria-label="Explore the gathering"
             >

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { SectionVisible } from "@/components/analytics/SectionVisible";
 
 const FAQS = [
   {
@@ -41,7 +42,8 @@ export function FAQ() {
   }
 
   return (
-    <section className="bg-[var(--paper)] w-full py-[var(--space-24)]">
+    <section className="bg-[var(--paper)] w-full py-[var(--space-24)] relative">
+      <SectionVisible name="gathering_faq" />
       <div className="container max-w-[720px] mx-auto">
 
         {/* Section header */}

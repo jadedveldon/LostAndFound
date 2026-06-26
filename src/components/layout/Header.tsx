@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { track } from '@/lib/analytics';
 
 const navLinks = [
   { label: 'Gatherings', href: '/gatherings' },
@@ -30,6 +31,7 @@ export function Header() {
               key={item.label}
               href={item.href}
               className="t-eyebrow text-xs relative group py-2"
+              onClick={() => track('nav_click', { nav_item: item.label.toLowerCase().replace(/[^a-z]/g, '_'), location: 'header_desktop' })}
             >
               {item.label.toUpperCase()}
               <div className="absolute bottom-0 left-0 w-full h-[2px] overflow-hidden">
@@ -46,6 +48,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--clay)] text-[var(--paper)] t-mono text-xs uppercase tracking-widest hover:bg-[var(--clay-deep)] transition-colors duration-fast"
+            onClick={() => track('cta_click', { cta_name: 'plan_with_us', location: 'header_desktop' })}
           >
             Plan With Us
           </a>
@@ -71,7 +74,7 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => { setMenuOpen(false); track('nav_click', { nav_item: item.label.toLowerCase().replace(/[^a-z]/g, '_'), location: 'header_mobile' }); }}
               className="t-eyebrow text-sm text-[var(--ink)] hover:text-[var(--clay)] transition-colors"
             >
               {item.label}
@@ -81,7 +84,7 @@ export function Header() {
             href="https://calendly.com/curator-lostandfoundtravel/30min"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => { setMenuOpen(false); track('cta_click', { cta_name: 'plan_with_us', location: 'header_mobile' }); }}
             className="inline-flex items-center justify-center px-5 py-3 bg-[var(--clay)] text-[var(--paper)] t-mono text-xs uppercase tracking-widest mt-2"
           >
             Plan With Us

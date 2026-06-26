@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { SectionVisible } from '@/components/analytics/SectionVisible';
+import { TrackableLink } from '@/components/ui/TrackableLink';
 
 const services = [
   'Complete personal itinerary design',
@@ -15,6 +17,7 @@ const services = [
 export function ExperienceSection() {
   return (
     <section className="bg-[var(--paper-deep)] relative overflow-hidden py-24 lg:py-32">
+      <SectionVisible name="experience_section" />
       <div className="container flex flex-col items-center max-w-4xl relative">
 
         {/* Large display heading */}
@@ -50,14 +53,16 @@ export function ExperienceSection() {
         </p>
 
         {/* Bottom link */}
-        <a
+        <TrackableLink
           href="https://calendly.com/curator-lostandfoundtravel/30min"
           target="_blank"
           rel="noopener noreferrer"
           className="t-h3-italic text-[var(--denim)] text-[clamp(16px,2vw,24px)] hover:text-[var(--denim-deep)] transition-colors relative z-20"
+          eventName="cta_click"
+          eventParams={{ cta_name: 'learn_how_it_works', location: 'experience_section' }}
         >
           Learn how it works ↗
-        </a>
+        </TrackableLink>
 
       </div>
     </section>

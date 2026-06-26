@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { SectionVisible } from '@/components/analytics/SectionVisible';
 
 const reviews = [
   {
@@ -36,7 +37,8 @@ const reviews = [
 
 export function ReviewsCarousel() {
   return (
-    <section className="py-20 lg:py-28 overflow-hidden" style={{ backgroundColor: '#eae9e3' }}>
+    <section className="py-20 lg:py-28 overflow-hidden relative" style={{ backgroundColor: '#eae9e3' }}>
+      <SectionVisible name="testimonials" />
       <div className="container mb-10 lg:mb-14">
         <span className="t-eyebrow block mb-3">TESTIMONIALS</span>
         <h2

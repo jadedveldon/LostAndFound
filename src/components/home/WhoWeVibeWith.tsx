@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { SectionVisible } from '@/components/analytics/SectionVisible';
 
 const archetypes = [
   'Emotionally exhausted',
@@ -14,6 +15,7 @@ const archetypes = [
 export function WhoWeVibeWith() {
   return (
     <section className="bg-[var(--paper-deep)] relative overflow-hidden py-10 lg:py-14">
+      <SectionVisible name="who_we_vibe_with" />
       <div className="container flex flex-col items-center max-w-4xl relative">
 
         {/* Large script heading */}

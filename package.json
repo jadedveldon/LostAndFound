@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
+    "@next/third-parties": "^16.2.9",
     "@phosphor-icons/react": "^2.1.10",
     "@sanity/client": "^7.22.0",
     "@types/pg": "^8.20.0",

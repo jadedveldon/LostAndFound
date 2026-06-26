@@ -2,10 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { HandUnderline } from '../illustrations/hand';
 import { MagneticButton } from '../ui/MagneticButton';
+import { SectionVisible } from '@/components/analytics/SectionVisible';
+import { TrackableLink } from '@/components/ui/TrackableLink';
 
 export function Hero() {
   return (
     <section className="w-full min-h-[90vh] flex flex-col justify-center relative pb-20 pt-28 md:pt-32 overflow-hidden bg-[var(--paper)]">
+      <SectionVisible name="hero" />
       <div className="container flex flex-col lg:flex-row items-center gap-10 lg:gap-6">
 
         {/* Left Text Column */}
@@ -40,11 +43,20 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto mt-4">
-            <a href="/experiences"><MagneticButton>Explore Gatherings</MagneticButton></a>
-            <a href="https://calendly.com/curator-lostandfoundtravel/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost-hand">
+            <TrackableLink href="/experiences" eventName="cta_click" eventParams={{ cta_name: 'explore_gatherings', location: 'hero' }}>
+              <MagneticButton>Explore Gatherings</MagneticButton>
+            </TrackableLink>
+            <TrackableLink
+              href="https://calendly.com/curator-lostandfoundtravel/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost-hand"
+              eventName="cta_click"
+              eventParams={{ cta_name: 'plan_personal_journey', location: 'hero' }}
+            >
               Plan a personal journey
               <HandUnderline className="btn-underline" />
-            </a>
+            </TrackableLink>
           </div>
         </div>
 

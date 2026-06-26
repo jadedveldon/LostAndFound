@@ -35,6 +35,8 @@ export const metadata: Metadata = {
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { MotionProvider } from "@/components/layout/MotionProvider";
 import { Agentation } from "agentation";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { ScrollDepthTracker } from "@/components/analytics/ScrollDepthTracker";
 
 export default function RootLayout({
   children,
@@ -60,8 +62,10 @@ export default function RootLayout({
         <MotionProvider>
           {children}
         </MotionProvider>
+        <ScrollDepthTracker />
         {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
+      <GoogleAnalytics gaId="G-J68KBX9HGV" />
     </html>
   );
 }

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useReducedMotion } from "framer-motion";
+import { track } from "@/lib/analytics";
 
 const SESSION_KEY = "sl_banner_dismissed";
 
@@ -31,7 +32,7 @@ export function StickyBanner() {
     <div
       role="banner"
       className="sticky-banner"
-      onClick={() => smoothScrollTo("request-invite", !!shouldReduceMotion)}
+      onClick={() => { smoothScrollTo("request-invite", !!shouldReduceMotion); track('cta_click', { cta_name: 'early_bird_banner', location: 'sticky_banner' }); }}
       style={{
         position: "sticky",
         top: "var(--header-h, 80px)",
