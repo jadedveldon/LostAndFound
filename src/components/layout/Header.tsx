@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { track } from '@/lib/analytics';
 
 const navLinks = [
@@ -19,9 +20,15 @@ export function Header() {
       <div className="container h-full flex items-center justify-between">
 
         {/* Brand */}
-        <Link href="/" className="flex flex-col group shrink-0">
-          <span className="uppercase leading-none text-[var(--ink)]" style={{ fontFamily: 'var(--font-display)', fontSize: '22px', letterSpacing: '0.06em' }}>Lost &amp; Found</span>
-          <span className="mt-1.5 text-[var(--ink-soft)]" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>Personal Travel Curators</span>
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/images/L&F logo.png"
+            alt="Lost & Found — Personal Travel Curators"
+            height={120}
+            width={300}
+            className="h-16 w-auto object-contain scale-150 origin-left"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

@@ -19,7 +19,7 @@ const allGatherings = [
     title: 'The Slow Transit',
     location: 'Ahangama, Sri Lanka',
     dates: 'Aug 20–26, 2026',
-    price: 'From INR 95,000',
+    price: 'From INR 99,999',
     imageSrc: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=600&auto=format&fit=crop',
     isSoldOut: false,
     tags: ['upcoming', 'international', 'solo'],
