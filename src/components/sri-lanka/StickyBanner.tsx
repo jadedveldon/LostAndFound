@@ -48,7 +48,7 @@ export function StickyBanner() {
         userSelect: "none",
       }}
     >
-      ✦&nbsp;&nbsp;APPLICATIONS CLOSE AUGUST 4TH &nbsp;·&nbsp; REQUEST YOUR INVITE&nbsp;&nbsp;✦
+      ✦&nbsp;&nbsp;EARLY BIRD APPLICATIONS CLOSE JULY 1ST &nbsp;·&nbsp; REQUEST YOUR INVITE&nbsp;&nbsp;✦
       <button
         aria-label="Dismiss banner"
         onClick={dismiss}

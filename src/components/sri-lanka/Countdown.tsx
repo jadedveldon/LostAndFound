@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 
-const TARGET = new Date("2026-08-04T23:59:59+05:30"); // IST end of day
+const TARGET = new Date("2026-07-01T23:59:59+05:30"); // IST end of day
 
 interface TimeLeft {
   days: number;
@@ -57,12 +57,12 @@ export function Countdown() {
 
         {/* Eyebrow */}
         <p className="t-eyebrow text-[var(--paper)] opacity-70 mb-4 text-center">
-          Registrations close
+          Early bird applications close
         </p>
 
         {/* Date heading */}
         <h2 className="t-display-2 text-[var(--paper)] text-center mb-10">
-          August 4th, 2026
+          July 1st, 2026
         </h2>
 
         {/* Countdown or closed message */}
@@ -111,7 +111,7 @@ export function Countdown() {
         {/* Pricing block */}
         <div className="flex flex-col items-center text-center">
           <p className="t-eyebrow text-[var(--paper)] opacity-70 mb-3">
-            PRICING
+            EARLY BIRD PRICING
           </p>
           <p
             className="text-[var(--paper)]"
@@ -120,7 +120,7 @@ export function Countdown() {
               fontSize: "clamp(36px, 5vw, 56px)",
             }}
           >
-            ₹99,999
+            ₹1,15,000
           </p>
           <p className="t-mono text-[var(--paper)] opacity-50 text-sm tracking-widest mt-1">
             $1,200 USD
