@@ -57,7 +57,7 @@ export function Countdown() {
 
         {/* Eyebrow */}
         <p className="t-eyebrow text-[var(--paper)] opacity-70 mb-4 text-center">
-          Early bird applications close
+          Applications close
         </p>
 
         {/* Date heading */}
