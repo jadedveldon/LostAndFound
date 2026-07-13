@@ -4,34 +4,28 @@ import { SectionVisible } from '@/components/analytics/SectionVisible';
 
 const reviews = [
   {
+    quote: "Planning our honeymoon felt overwhelming — that's when Lost & Found stepped in and made it all possible. I absolutely loved that Tanya stayed connected with us throughout the trip, making sure everything went perfectly.",
+    name: 'Joel & Grace',
+    context: 'Honeymoon',
+    image: '/images/testimonials/joel-and-grace.jpg',
+  },
+  {
     quote: "I didn't know how tired I was until I didn't have to plan a single thing. This was a reset I didn't know I needed.",
     name: 'Mona & Champ',
     context: 'L&F Experience — Jaipur',
-    image: null,
+    image: '/images/testimonials/champ-and-mona.jpg',
   },
   {
-    quote: "The first trip where neither of us had to carry the mental load. We just showed up and let it happen. Pure relief.",
-    name: 'Grace & Joel',
-    context: 'The Slow Transit — Ahangama',
-    image: null,
+    quote: "What stood out most was how flexible and easy the team was to work with. They helped us stay within budget without compromising on the experience — our team felt genuinely taken care of from start to finish.",
+    name: 'Team Exemplify',
+    context: 'Corporate Offsite',
+    image: '/images/testimonials/offsite.jpg',
   },
   {
-    quote: "They understood what we wanted before we even finished explaining it. My family is still talking about that trip.",
-    name: 'Siddharth & family',
-    context: 'Family Trip — Coorg',
-    image: null,
-  },
-  {
-    quote: "We've done corporate offsites before — nothing has come close to this. The team actually disconnected. Properly.",
-    name: 'Konidela family',
-    context: 'Corporate Planning — Goa',
-    image: null,
-  },
-  {
-    quote: "It felt like traveling with a friend who knew every right turn. Not a tourist trap in sight. Just the real thing.",
-    name: 'Anonymous',
-    context: 'Corporate Planning',
-    image: null,
+    quote: "A huge, special shoutout to Tanya for putting this together and creating such an amazing experience. The laughs, the conversations, and the overall vibe made it unforgettable.",
+    name: 'Avishake',
+    context: 'Into the Wild Getaway',
+    image: '/images/testimonials/into-the-wild.jpg',
   },
 ];
 
@@ -50,11 +44,11 @@ export function ReviewsCarousel() {
       </div>
 
       <div className="container">
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex flex-col border overflow-hidden"
+              className="flex flex-col border overflow-hidden"
               style={{
                 backgroundColor: 'var(--paper-deep)',
                 borderColor: 'rgba(0,0,0,0.08)',

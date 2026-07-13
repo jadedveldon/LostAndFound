@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { SectionVisible } from '@/components/analytics/SectionVisible';
+import { getSortedJournalPosts } from '@/data/journalPosts';
 
 const categories = [
   'Slow Travel',
@@ -13,32 +14,16 @@ const categories = [
   'Gathering Diaries',
 ];
 
-const articles = [
-  {
-    title: 'Why we stopped selling itineraries',
-    excerpt: 'The truth about decision fatigue, and why knowing what happens at 2 PM on a Tuesday ruins the magic of traveling.',
-    date: 'MAY 12, 2026',
-    category: "Founder's Notes",
-    img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=600&auto=format&fit=crop',
-    slug: 'why-we-stopped-selling-itineraries',
-  },
-  {
-    title: 'Notes from Spiti Valley',
-    excerpt: 'What happens when you spend five days at 12,000 feet with no cell reception and strangers who brought their journals.',
-    date: 'APR 04, 2026',
-    category: 'Gathering Diaries',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop',
-    slug: 'notes-from-spiti-valley',
-  },
-  {
-    title: 'How to pack for a slow trip',
-    excerpt: "Leave the 'just in case' outfits. Bring the book you've been trying to finish for three years.",
-    date: 'MAR 18, 2026',
-    category: 'Slow Travel',
-    img: 'https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=600&auto=format&fit=crop',
-    slug: 'how-to-pack-for-a-slow-trip',
-  },
-];
+const articles = getSortedJournalPosts()
+  .slice(0, 3)
+  .map((post) => ({
+    title: post.title,
+    excerpt: post.excerpt,
+    date: post.date,
+    category: post.category,
+    img: post.heroImage,
+    slug: post.slug,
+  }));
 
 export function JournalPreview() {
   return (

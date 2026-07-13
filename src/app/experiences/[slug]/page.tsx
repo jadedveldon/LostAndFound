@@ -59,7 +59,7 @@ export default function ExperienceDetail() {
                 <span className="t-mono text-[10px] uppercase text-[var(--ink-mute)] mb-2">Host</span>
                 <div className="flex items-center gap-4 mt-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt="Tanya" className="w-12 h-12 rounded-full object-cover" />
+                  <img src="/images/Tanya.png" alt="Tanya" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <span className="t-body-lg block">Tanya</span>
                     <span className="t-body-sm text-[var(--ink-soft)]">L&F Founder</span>

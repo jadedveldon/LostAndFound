@@ -71,7 +71,7 @@ export default function DashboardPage() {
                 <div className="flex items-center gap-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
-                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" 
+                    src="/images/Tanya.png"
                     alt="Tanya" 
                     className="w-16 h-16 rounded-full object-cover" 
                   />
