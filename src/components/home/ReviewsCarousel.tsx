@@ -6,25 +6,25 @@ const reviews = [
   {
     quote: "Planning our honeymoon felt overwhelming — that's when Lost & Found stepped in and made it all possible. I absolutely loved that Tanya stayed connected with us throughout the trip, making sure everything went perfectly.",
     name: 'Joel & Grace',
-    context: 'Honeymoon',
+    context: 'Honeymoon — Vietnam',
     image: '/images/testimonials/joel-and-grace.jpg',
   },
   {
     quote: "I didn't know how tired I was until I didn't have to plan a single thing. This was a reset I didn't know I needed.",
     name: 'Mona & Champ',
-    context: 'L&F Experience — Jaipur',
+    context: 'L&F Experience — Dubai',
     image: '/images/testimonials/champ-and-mona.jpg',
   },
   {
     quote: "What stood out most was how flexible and easy the team was to work with. They helped us stay within budget without compromising on the experience — our team felt genuinely taken care of from start to finish.",
     name: 'Team Exemplify',
-    context: 'Corporate Offsite',
+    context: 'Corporate Offsite — Mumbai',
     image: '/images/testimonials/offsite.jpg',
   },
   {
     quote: "A huge, special shoutout to Tanya for putting this together and creating such an amazing experience. The laughs, the conversations, and the overall vibe made it unforgettable.",
     name: 'Avishake',
-    context: 'Into the Wild Getaway',
+    context: 'Into the Wild Getaway — Sur Bahar',
     image: '/images/testimonials/into-the-wild.jpg',
   },
 ];
