@@ -25,8 +25,6 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li><Link href="/gatherings" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Gatherings</Link></li>
               <li><a href="https://calendly.com/curator-lostandfoundtravel/30min" target="_blank" rel="noopener noreferrer" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Plan With Us</a></li>
-              <li><Link href="/decision-detox" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Decision Detox</Link></li>
-              <li><Link href="/a-la-carte" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">A La Carte</Link></li>
             </ul>
           </div>
 
@@ -35,7 +33,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li><Link href="/our-story" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Our Story</Link></li>
               <li><Link href="/journal" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Journal</Link></li>
-              <li><Link href="/reviews" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Reviews</Link></li>
+              <li><Link href="/#testimonials" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Testimonials</Link></li>
             </ul>
           </div>
 
@@ -44,7 +42,6 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li><Link href="/contact" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Contact</Link></li>
               <li><Link href="/faq" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">FAQ</Link></li>
-              <li><Link href="/legal/cancellation" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Cancellation</Link></li>
               <li><Link href="/legal/privacy" className="t-body-sm text-[var(--ink-soft)] hover:text-[var(--clay)] transition-colors">Privacy &amp; Terms</Link></li>
             </ul>
           </div>

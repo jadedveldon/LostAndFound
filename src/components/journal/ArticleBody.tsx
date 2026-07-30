@@ -1,6 +1,7 @@
 import React from "react";
 import { JournalBlock } from "@/data/journalPosts";
 import { formatInline } from "@/lib/formatInline";
+import { FAQAccordion } from "@/components/journal/FAQAccordion";
 
 export function ArticleBody({ blocks }: { blocks: JournalBlock[] }) {
   return (
@@ -10,7 +11,11 @@ export function ArticleBody({ blocks }: { blocks: JournalBlock[] }) {
         switch (block.type) {
           case "p":
             return (
-              <p key={key} className="t-body-lg text-[var(--ink)] mb-8 leading-relaxed">
+              <p
+                key={key}
+                className="t-body-lg text-[var(--ink)] mb-8 leading-relaxed"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
                 {formatInline(block.text, key)}
               </p>
             );
@@ -52,7 +57,11 @@ export function ArticleBody({ blocks }: { blocks: JournalBlock[] }) {
             return (
               <ul key={key} className="list-disc pl-6 mb-8 flex flex-col gap-2">
                 {block.items.map((item, i) => (
-                  <li key={`${key}-${i}`} className="t-body-lg text-[var(--ink)] leading-relaxed">
+                  <li
+                    key={`${key}-${i}`}
+                    className="t-body-lg text-[var(--ink)] leading-relaxed"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
                     {formatInline(item, `${key}-${i}`)}
                   </li>
                 ))}
@@ -66,18 +75,7 @@ export function ArticleBody({ blocks }: { blocks: JournalBlock[] }) {
               </div>
             );
           case "faq":
-            return (
-              <div key={key} className="flex flex-col gap-8 mt-4 mb-12">
-                {block.items.map((item, i) => (
-                  <div key={`${key}-${i}`}>
-                    <h4 className="t-h4 text-[var(--ink)] mb-3 font-bold">{item.q}</h4>
-                    <p className="t-body-lg text-[var(--ink-soft)] leading-relaxed">
-                      {formatInline(item.a, `${key}-${i}`)}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            );
+            return <FAQAccordion key={key} items={block.items} blockKey={key} />;
           case "promo":
             return (
               <div
@@ -88,7 +86,11 @@ export function ArticleBody({ blocks }: { blocks: JournalBlock[] }) {
                   Share this
                 </span>
                 {block.text.split("\n\n").map((para, i) => (
-                  <p key={`${key}-${i}`} className="t-body-lg text-[var(--ink)] leading-relaxed">
+                  <p
+                    key={`${key}-${i}`}
+                    className="t-body-lg text-[var(--ink)] leading-relaxed"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
                     {formatInline(para, `${key}-${i}`)}
                   </p>
                 ))}

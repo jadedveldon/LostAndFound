@@ -208,11 +208,6 @@ export const journalPosts: JournalPost[] = [
           },
         ],
       },
-      {
-        type: "promo",
-        text: "Are you tired of returning from vacations feeling more exhausted than when you left? **It's time to embrace the Slow Travel movement and revolutionize your approach to travel.**\n\nIn today's fast-paced world, we often prioritize efficiency over experience. However, this approach can lead to burnout and superficial travel experiences. Slow Travel offers a refreshing alternative, focusing on depth over breadth and quality over quantity.\n\n**Key benefits of Slow Travel:**\n• Reduced decision fatigue\n• Deeper cultural immersion\n• More authentic experiences\n• Improved work-life balance\n\nBy adopting Slow Travel principles, you can transform your vacations into rejuvenating experiences that leave you feeling refreshed and inspired. It's not about seeing everything; it's about truly experiencing what matters.\n\nReady to redefine your travel philosophy? Let's discuss how Slow Travel can benefit you and your organization in the comments below.",
-        hashtags: ["#SlowTravel", "#IntentionalTravel", "#WorkLifeBalance", "#TravelIndustry"],
-      },
     ],
   },
 

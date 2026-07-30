@@ -43,7 +43,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto mt-4">
-            <TrackableLink href="/experiences" eventName="cta_click" eventParams={{ cta_name: 'explore_gatherings', location: 'hero' }}>
+            <TrackableLink href="/gatherings" eventName="cta_click" eventParams={{ cta_name: 'explore_gatherings', location: 'hero' }}>
               <MagneticButton>Explore Gatherings</MagneticButton>
             </TrackableLink>
             <TrackableLink

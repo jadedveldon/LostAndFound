@@ -14,8 +14,8 @@ export default function JournalIndex() {
         {/* Header */}
         <section className="pt-32 pb-16 section border-b border-[var(--ink)]/10">
           <div className="container max-w-3xl text-center">
-            <h1 className="t-display-1 text-[var(--clay)] mb-6" style={{ fontFamily: 'var(--font-script)' }}>the journal</h1>
-            <p className="t-body-lg text-[var(--ink-soft)] italic">
+            <h1 className="t-display-1 text-[var(--clay)] mb-6" style={{ fontFamily: 'var(--font-script)' }}>Our Journal</h1>
+            <p className="t-body-lg text-[var(--ink-soft)] italic" style={{ fontFamily: 'var(--font-heading)' }}>
               *slow letters, field notes, and thoughts on traveling differently.*
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function JournalIndex() {
                   <h2 className="t-h2 text-[var(--ink)] group-hover:text-[var(--clay)] transition-colors mb-4">
                     {article.title}
                   </h2>
-                  <p className="t-body-lg text-[var(--ink-soft)] mb-8">
+                  <p className="t-body-lg text-[var(--ink-soft)] mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
                     {article.excerpt}
                   </p>
                   <span className="t-body-italic text-[var(--denim)] flex items-center gap-2 group-hover:translate-x-2 transition-transform w-fit">

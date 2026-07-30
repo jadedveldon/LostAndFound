@@ -6,9 +6,8 @@ import { track } from '@/lib/analytics';
 
 const navLinks = [
   { label: 'Gatherings', href: '/gatherings' },
-  { label: 'Experiences', href: '/experiences' },
   { label: 'Our Journal', href: '/journal' },
-  { label: 'Why We\'re Here', href: '/our-story' },
+  { label: 'Our Story', href: '/our-story' },
 ];
 
 export function Header() {
